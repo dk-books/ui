@@ -28,12 +28,13 @@ jobs:
           echo "//npm.pkg.github.com/:_authToken=${{secrets.UI_TOKEN_2023}}" > ~/.npmrc
       - name: Install modules
         run: npm ci
-
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.UI_NPM_TOKEN_2023 }}
       - name: Build
         run: npm run build
 
       - name: Publish
         run: npm run release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.UI_TOKEN_2023 }}
+          NODE_AUTH_TOKEN: ${{ secrets.UI_NPM_TOKEN_2023 }}
       
