@@ -31,4 +31,7 @@ jobs:
         run: npm run release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.UI_NPM_TOKEN_2023 }}
+
+      - name: Publish to Github pages
+        run: npm run deploy-storybook
       
