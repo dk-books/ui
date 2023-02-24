@@ -1,12 +1,11 @@
 {
-	"name": "@dk-books/ui",
+	"name": "ui",
 	"homepage": "https://dk-books.github.io/ui/",
-	"version": "0.1.8",
+	"version": "0.2.0",
 	"main": "build/bundle.js",
 	"repository": "dk-books/ui",
 	"publishConfig": {
-		"registry": "https://npm.pkg.github.com",
-		"access": "restricted"
+		"registry": "https://npm.pkg.github.com"
 	},
 	"scripts": {
 		"start": "react-scripts start",
