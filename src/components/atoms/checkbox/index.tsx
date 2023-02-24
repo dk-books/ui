@@ -1,0 +1,49 @@
+import React, {useState} from 'react';
+import type {UseFormRegisterReturn} from 'react-hook-form';
+
+export type CheckBoxErrorProps = {
+	error?: boolean;
+	errorColor?: string;
+} & React.InputHTMLAttributes<HTMLInputElement>;
+
+export type CheckBoxProps = {
+	customId?: string;
+	children?: React.ReactNode;
+	placeholder?: string;
+	checkBoxClassName?: string;
+	labelClassName?: string;
+	inputRef?: any;
+	onChange?: any;
+	input?: CheckBoxErrorProps;
+	dotted?: boolean;
+	defaultChecked?: boolean;
+	register?: UseFormRegisterReturn;
+	error?: string;
+};
+
+export const Checkbox: React.FC<CheckBoxProps> = ({customId, register, defaultChecked, onChange, children, placeholder, inputRef, checkBoxClassName, labelClassName, dotted, input, error, ...props}: CheckBoxProps) => {
+	const dottedDisplay = dotted ? 'pl-2 pt-2 border-dashed border-2' : '';
+	const errorColor = error ? 'text-red3' : 'text-neutrals-3';
+
+	return (
+		<div>
+			<div className={`${dottedDisplay}`}>
+				<div className='flex items-center mb-2'>
+					<input {...input}
+						defaultChecked={defaultChecked ? defaultChecked : false}
+						id={customId}
+						type='checkbox'
+						className={`w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 ${errorColor} ${checkBoxClassName ? checkBoxClassName : ''}`}
+						{...register}
+					/>
+					{children && <label className={'ml-2 text-14 font-medium text-gray-300'}>{children}</label>}
+				</div>
+			</div>
+			{placeholder && <div className='flex items-center'><div className='form-check'><div className={'ml-6 text-14 font-medium text-neutrals-3 text-12 font-light'}>{placeholder}</div></div></div>}
+			{error && <div className={`pl-6 text-14 font-medium text-12 font-light ${errorColor}`}>{error}</div>}
+		</div>
+
+	);
+};
+
+export default Checkbox;
