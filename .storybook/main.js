@@ -7,8 +7,11 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/preset-create-react-app"
+    "@storybook/preset-create-react-app",
+    "storybook-addon-next-router",
+    "storybook-addon-designs",
   ],
+  "staticDir": ["../public", "../src/assets/svgs"],
   "framework": "@storybook/react",
   "core": {
     "builder": "@storybook/builder-webpack5"
