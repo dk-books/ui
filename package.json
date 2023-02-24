@@ -12,6 +12,9 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+	"overrides": {
+		"postcss": "8.4.19"
+ },
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
