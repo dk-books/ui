@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          New UI Storybook Testing
+          New UI Storybook Testingd
         </a>
       </header>
     </div>
