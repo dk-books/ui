@@ -25,7 +25,7 @@ jobs:
       - name: Configure Github Package Registry
         run: |
           npm config set @dk-books:registry https://npm.pkg.github.com
-          echo "//npm.pkg.github.com/:_authToken=${{secrets.GPR_ACCESS_TOKEN_27JAN_2023}}" > ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{secrets.UI_TOKEN_2023}}" > ~/.npmrc
       - name: Install modules
         run: npm ci
 
@@ -35,5 +35,5 @@ jobs:
       - name: Publish
         run: npm run release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GPR_ACCESS_TOKEN_27JAN_2023 }}
+          NODE_AUTH_TOKEN: ${{ secrets.UI_TOKEN_2023 }}
       
