@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  push:
+    paths:
+      # Trying to run whenever the version is changed.
+      # There is probably a smarter way to do this.
+      - 'package.json'
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js with GitHub Package Registry
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@dk-books"
+
+      - name: Install modules
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Publish
+        run: npm run release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
