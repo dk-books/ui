@@ -5,7 +5,8 @@
 	"main": "build/bundle.js",
 	"repository": "dk-books/ui",
 	"publishConfig": {
-		"registry": "https://npm.pkg.github.com"
+		"registry": "https://npm.pkg.github.com",
+		"access": "restricted"
 	},
 	"scripts": {
 		"start": "react-scripts start",
