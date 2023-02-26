@@ -33,7 +33,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.UI_NPM_TOKEN_2023 }}
 
       - name: Deploy
-        uses: ui/actions-gh-pages@v3
+        uses: 
+          - name: Dk-Books/gh-pages-action@v1.0.0
+            id: gh-pages
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
