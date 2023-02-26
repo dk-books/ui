@@ -1,21 +1,23 @@
-name: Deploy
-
 on:
   push:
     branches:
       - 'main'
-    
+    paths: ["stories/**", "src/components/**"]
+
+name: Deploy Github Pages
+
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
     steps:
       - name: Checkout
         uses: actions/checkout@main
       - name: Build Storybook
         run: |
+          npm install
           npm run build-storybook
         env:
           NODE_AUTH_TOKEN: ${{ secrets.UI_NPM_TOKEN_2023 }}
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
