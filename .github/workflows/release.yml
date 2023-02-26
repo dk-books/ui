@@ -31,7 +31,7 @@ jobs:
         run: npm run release -- --gh-pages
         env:
           NODE_AUTH_TOKEN: ${{ secrets.UI_NPM_TOKEN_2023 }}
-          
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v1
