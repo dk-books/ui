@@ -31,3 +31,6 @@ jobs:
         run: npm run release -- --gh-pages
         env:
           NODE_AUTH_TOKEN: ${{ secrets.UI_NPM_TOKEN_2023 }}
+
+      - name: Github pre deploy hook
+        run: npm run predeploy
