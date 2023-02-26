@@ -32,5 +32,5 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.UI_NPM_TOKEN_2023 }}
 
-      - name: Github pre deploy hook
-        run: npm run predeploy
+      - name: Github deploy storybook page
+        run: npm run deploy-storybook
