@@ -1,0 +1,20 @@
+Name: Github IO Pages
+
+on: 
+  push:
+    branches:
+     - main
+    paths: ["stories/**", "src/components/**"]
+    
+name: Publish stories if changed
+    
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@main
+    - name: Build Storybook
+      run: |
+        npm install
+        npm run build-storybook
