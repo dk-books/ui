@@ -13,8 +13,7 @@ jobs:
         uses: actions/checkout@main
       - name: Build Storybook
         run: |
-          npm install
-          npm run build-storybook
+          npm run storybook:deploy
         env:
           NODE_AUTH_TOKEN: ${{ secrets.UI_NPM_TOKEN_2023 }}
       - name: Deploy to GitHub Pages
