@@ -31,3 +31,9 @@ jobs:
         run: npm run release -- --gh-pages
         env:
           NODE_AUTH_TOKEN: ${{ secrets.UI_NPM_TOKEN_2023 }}
+
+      - name: Deploy
+        uses: ui/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
