@@ -1,10 +1,10 @@
+name: Deploy Github Pages
+
 on:
   push:
     branches:
       - 'main'
     paths: ["stories/**", "src/components/**"]
-
-name: Deploy Github Pages
 
 jobs:
   build-and-deploy:
