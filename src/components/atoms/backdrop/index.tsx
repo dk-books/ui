@@ -4,7 +4,7 @@ import {useImages} from '../../../utility/hooks/use-images';
 import Image from 'next/image';
 
 type BackdropProps = {
-	children?: JSX.Element;
+	children?: React.ReactNode;
 };
 
 const Backdrop: FC<BackdropProps> = ({
@@ -23,7 +23,7 @@ const Backdrop: FC<BackdropProps> = ({
 		<>
 			<div className={`${imageClasses} left-0 z-0`}>
 				<Image
-					src={imageUrls['Top-left_new']}
+					src={imageUrls['Top-left_new'] ? imageUrls['Top-left_new'] : 'Top-left_new'}
 					alt='Top left'
 					width='800'
 					height='456'
@@ -32,7 +32,7 @@ const Backdrop: FC<BackdropProps> = ({
 
 			<div className={`${imageClasses} left-0 bottom-0`}>
 				<Image
-					src={imageUrls['bottom-left_new']}
+					src={imageUrls['bottom-left_new'] ? imageUrls['bottom-left_new'] : 'bottom-left_new'}
 					alt='Bottom left'
 					width='653'
 					height='253'
@@ -41,7 +41,7 @@ const Backdrop: FC<BackdropProps> = ({
 
 			<div className={`${imageClasses} absolute right-0`}>
 				<Image
-					src={imageUrls['Top-right_new']}
+					src={imageUrls['Top-right_new'] ? imageUrls['Top-right_new'] : 'Top-right_new'}
 					alt='Top right'
 					width='800'
 					height='457'
@@ -50,7 +50,7 @@ const Backdrop: FC<BackdropProps> = ({
 
 			<div className={`${imageClasses} right-0 bottom-0`}>
 				<Image
-					src={imageUrls['Bottom-right_new']}
+					src={imageUrls['Bottom-right_new'] ? imageUrls['Bottom-right_new'] : 'Bottom-right_new'}
 					alt='Bottom right'
 					width='635'
 					height='253'
