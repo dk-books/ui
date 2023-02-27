@@ -28,7 +28,7 @@ type ButtonProps = {
 	dropdown?: boolean;
 };
 
-const Button: FC<ButtonProps> = ({
+const Button: React.FC<ButtonProps> = ({
 	href,
 	children,
 	colour = 'default',
@@ -49,7 +49,7 @@ const Button: FC<ButtonProps> = ({
 	let buttonColor = colors[colour] || colors.default;
 
 	/** GA tracking */
-	const googleAnalyticsTracking = (item: string, category: string | undefined) => {
+	const googleAnalyticsTracking = (item?: string, category?: string | undefined) => {
 		ga.event({
 			action: 'Click',
 			category: {category},
@@ -103,12 +103,12 @@ const Button: FC<ButtonProps> = ({
 			<div className={`${classnames!} ${buttonClass!}`}>
 				{icon ? (<div className='items-center justify-center pr-2'><Icons icon={icon} /></div>) : null}
 				<div className='mx-auto w-full'>
-					<Link href={href} onClick={() => {
+					<a href={href} onClick={() => {
 						googleAnalyticsTracking(text, category);
 					}
 					} aria-controls={ariaControls} target={newTab}>
 						{text}
-					</Link>
+					</a>
 				</div>
 			</div>
 		);
