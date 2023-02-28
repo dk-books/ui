@@ -2,10 +2,11 @@ import React from 'react';
 import type {FC, ReactNode} from 'react';
 import Link from 'next/link';
 import {Icons} from '../icons';
-import {colors} from '../../../utility/themes/themes';
+import {dklearning, efe, fontColor} from '../../../utility/themes/themes';
 import * as ga from '../../../utility/ga';
 
 type ButtonProps = {
+	repo?: string;
 	href?: string;
 	colour?: string;
 	children: ReactNode;
@@ -29,6 +30,7 @@ type ButtonProps = {
 };
 
 const Button: React.FC<ButtonProps> = ({
+	repo = 'default',
 	href,
 	children,
 	colour = 'default',
@@ -46,8 +48,6 @@ const Button: React.FC<ButtonProps> = ({
 	dropdown,
 	onClick,
 }) => {
-	let buttonColor = colors[colour] || colors.default;
-
 	/** GA tracking */
 	const googleAnalyticsTracking = (item?: string, category?: string | undefined) => {
 		ga.event({
@@ -55,6 +55,31 @@ const Button: React.FC<ButtonProps> = ({
 			category: {category},
 			label: item,
 		});
+	};
+
+	// Repo Button Type
+	const buttonRepo = (repo: string, type: string, colour: string) => {
+		switch (repo) {
+			case 'dklearning':
+				return dklearning[type] + dklearning[colour];
+			case 'efe':
+				return efe[type] + efe[colour];
+			default:
+				return 'py-3 px-6 mx-auto text-center';
+		}
+	};
+
+	// Repo Button width
+	const buttonwidth = (size: string | undefined) => {
+		const width = size === 'four_column' ? 'lg:w243 lg:h49 mobile:w240 mobile:h49' : 'lg:w243 lg:h49 sm:w240 sm:h49 md:w-185 md:h-49 lg:w-315 lg:h49';
+		switch (buttonType) {
+			case 'advert':
+				return width;
+			case 'promo':
+				return 'md:w-128 md:h-43';
+			default:
+				return 'md:h-44 ' + width;
+		}
 	};
 
 	if (dropdown) {
@@ -76,31 +101,21 @@ const Button: React.FC<ButtonProps> = ({
 		);
 	}
 
-	const buttonwidth = (size: string | undefined) => {
-		const width = size === 'four_column' ? 'lg:w243 lg:h49 mobile:w240 mobile:h49' : 'lg:w243 lg:h49 sm:w240 sm:h49 md:w-185 md:h-49 lg:w-315 lg:h49';
-		switch (buttonType) {
-			case 'advert':
-				return width;
-			case 'promo':
-				return 'md:w-128 md:h-43';
-			default:
-				return 'md:h-44 ' + width;
-		}
-	};
-
+	// Icon with text href
 	if (text && href) {
-		const tailwindClass = 'text-white inline-flex items-center';
 		const buttonWidth = buttonwidth(layout);
-		const tailwind = 'py-3 px-6 mx-auto text-center items-center rounded-lg mx-0 my-7 whitespace-nowrap';
 		let buttonClass = null;
 
 		if (colour) {
-			buttonColor = buttonColor + ' ' + tailwindClass;
-			buttonClass = `${buttonColor} ${buttonWidth} ${tailwind}`;
+			const pickFontColor = 'white';
+			buttonClass = `${efe.default} ${fontColor[pickFontColor]} ${buttonWidth}`;
 		}
 
 		return (
-			<div className={`${classnames!} ${buttonClass!}`}>
+			<div className={`
+				${buttonRepo(repo, 'button', colour)}
+				${buttonClass!}
+				`}>
 				{icon ? (<div className='items-center justify-center pr-2'><Icons icon={icon} /></div>) : null}
 				<div className='mx-auto w-full'>
 					<a href={href} onClick={() => {
@@ -114,6 +129,7 @@ const Button: React.FC<ButtonProps> = ({
 		);
 	}
 
+	// A href Path only
 	if (path) {
 		return (
 			<div className='flex'>
@@ -131,13 +147,14 @@ const Button: React.FC<ButtonProps> = ({
 		);
 	}
 
+	// Button Href
+	const defaultCheck = repo === 'efe' ? efe.default : dklearning.default;
 	const button = (
 		<button className={`
-		${classnames!}
-		${buttonColor}
+		  ${buttonRepo(repo, 'button', colour)}
+			${classnames!}
+			${defaultCheck}
 			${wide ? 'w-full' : 'md:auto'}
-			sm:w-full flex sm:text-14 text-16 xl:text-18
-    	text-white rounded-lg items-center py-3 px-6 text-lg
 		`}>
 			<div className='flex-grow'></div>
 			{icon ? <div className='pr-2'><Icons icon={icon} /></div> : null}
