@@ -5,6 +5,7 @@ import {Button} from '../../../components/atoms/button';
 import type {FC, ReactNode} from 'react';
 
 type CallToActionProps = {
+	repo?: string;
 	imageUrl?: string;
 	href: string;
 	onClick: () => void;
@@ -21,6 +22,7 @@ type CallToActionProps = {
 };
 
 const CallToAction: FC<CallToActionProps> = ({
+	repo = 'default',
 	onClick,
 	imageUrl,
 	href,
@@ -68,6 +70,7 @@ const CallToAction: FC<CallToActionProps> = ({
         px-1 m-1
         ${text ? 'absolute bottom-0 w-full' : ''}`}>
 				<Button
+					repo={repo}
 					colour={button.colour}
 					href={href}
 					icon={button.icon}

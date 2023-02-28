@@ -55,6 +55,7 @@ const LinksDropdown: FC<LinksDropdownProps> = ({
 										onClicked(link);
 									}}>
 									<Button
+										repo={'efe'}
 										externalLink={link.externalLink}
 										path={link.path}
 										icon={link.icon?.url}>
