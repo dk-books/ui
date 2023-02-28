@@ -1,6 +1,5 @@
 import React from 'react';
 import type {FC, ReactNode} from 'react';
-import Link from 'next/link';
 import {Icons} from '../icons';
 import {dklearning, efe, fontColor} from '../../../utility/themes/themes';
 import * as ga from '../../../utility/ga';
