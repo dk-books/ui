@@ -11,3 +11,8 @@ export const efeBtn: (Record<string, string>) = {
 	turquoise: 'bg-turquoise-700 hover:bg-turquoise-900',
 	default: 'bg-blue-350 hover:bg-blue-300',
 };
+
+export const fontColor: (Record<string, string>) = {
+	white: 'text-white inline-flex items-center',
+	default: 'text-black inline-flex items-center',
+};

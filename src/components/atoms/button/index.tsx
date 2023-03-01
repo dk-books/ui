@@ -1,9 +1,8 @@
 import React from 'react';
 import type {FC, ReactNode} from 'react';
 import {Icons} from '../icons';
-import {fontColor} from '../../../utility/themes/themes';
 import {dklBtn} from '../../../utility/themes/dkl/theme';
-import {efeBtn} from '../../../utility/themes/efe/theme';
+import {efeBtn, fontColor} from '../../../utility/themes/efe/theme';
 import * as ga from '../../../utility/ga';
 
 type ButtonProps = {
