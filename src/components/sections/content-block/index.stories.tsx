@@ -8,10 +8,13 @@ const Template: Story<React.ComponentProps<typeof ContentBlock>> = args => <Cont
 
 export const ctaText = Template.bind({});
 ctaText.args = {
+	repo: 'efe',
 	type: 'Cta',
-	buttonText: 'Get the audio',
-	buttonColour: 'orange',
-	buttonicon: 'download',
+	button: {
+		text: 'Get the audio',
+		colour: 'orange',
+		icon: 'download',
+	},
 	ctaType: '',
 	text: 'Teach yourself English from beginner to advanced with a range of course and practice books. Includes general English, business English and a grammar guide.',
 	href: '/en/audio',
@@ -23,10 +26,13 @@ ctaText.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5
 
 export const ctaHtml = Template.bind({});
 ctaHtml.args = {
+	repo: 'efe',
 	type: 'Cta',
-	buttonText: 'Buy the books',
-	buttonColour: 'red',
-	buttonicon: 'book',
+	button: {
+		text: 'Buy the books',
+		colour: 'red',
+		icon: 'book',
+	},
 	ctaType: 'cta',
 	text: 'Teach yourself English from beginner to advanced with a range of course and practice books. Includes general English, business English and a grammar guide.',
 	href: '/en/buy-books',
@@ -40,9 +46,11 @@ ctaHtml.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5
 export const ctaSlim = Template.bind({});
 ctaSlim.args = {
 	type: 'Cta',
-	buttonText: 'Get the audio',
-	buttonColour: 'teal',
-	buttonicon: 'book',
+	button: {
+		text: 'Get the audio',
+		colour: 'teal',
+		icon: 'book',
+	},
 	ctaType: 'cta',
 	href: '/en/buy-books',
 	imageSrc: 'https://media.graphassets.com/BlzSxAlQi6rc94jHoOQl',

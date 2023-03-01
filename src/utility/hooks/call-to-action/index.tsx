@@ -13,9 +13,9 @@ type CallToActionProps = {
 	advert: boolean;
 	text: string;
 	button?: {
-		colour: string;
-		icon: string;
-		text: string;
+		colour?: string;
+		icon?: string;
+		text?: string;
 	};
 	alignContents?: 'left' | 'center';
 	externalLink?: boolean;

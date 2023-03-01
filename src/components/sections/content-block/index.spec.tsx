@@ -10,12 +10,16 @@ describe('ContentBlock', () => {
 	};
 
 	it('renders ContentBlock', () => {
+		const button = {
+			text: 'Buy the books',
+			colour: 'red',
+			icon: 'book',
+		};
+
 		render(<ContentBlock
 			type={'Cta'}
-			buttonText={'Buy the books'}
-			buttonColour={'red'}
-			buttonicon={'book'}
-			ctaType= {'cta'}
+			button={button}
+			ctaType={'cta'}
 			text={'Teach yourself English from beginner to advanced with a range of course and practice books. Includes general English, business English and a grammar guide.'}
 			href={'/en/buy-books'}
 			title={'Course & practice books'}

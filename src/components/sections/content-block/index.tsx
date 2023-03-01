@@ -7,9 +7,11 @@ type ContentBlockProps = {
 	repo?: string;
 	type: string;
 	ctaType: string;
-	buttonText: string;
-	buttonColour: string;
-	buttonicon: string;
+	button?: {
+		text?: string;
+		colour?: string;
+		icon?: string;
+	};
 	text: string;
 	onClick: () => void;
 	href: string;
@@ -22,9 +24,7 @@ type ContentBlockProps = {
 const ContentBlock: FC<ContentBlockProps> = ({
 	repo = 'default',
 	type,
-	buttonText,
-	buttonColour,
-	buttonicon,
+	button,
 	ctaType,
 	text,
 	onClick,
@@ -36,9 +36,6 @@ const ContentBlock: FC<ContentBlockProps> = ({
 }) => {
 	if (type === 'Cta') {
 		const advert = ctaType === 'advert' ? true : null;
-
-		const button = {colour: buttonColour, icon: buttonicon, text: buttonText};
-
 		if (text) {
 			return <CallToAction
 				repo={repo}
