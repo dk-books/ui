@@ -22,7 +22,7 @@ type CallToActionProps = {
 };
 
 const CallToAction: FC<CallToActionProps> = ({
-	repo = 'default',
+	repo = 'efe',
 	onClick,
 	imageUrl,
 	href,

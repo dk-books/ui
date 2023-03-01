@@ -4,6 +4,7 @@ import {CallToAction} from '../../../utility/hooks/call-to-action';
 import {SlimCallToAction} from '../../../utility/hooks/slim-call-to-action';
 
 type ContentBlockProps = {
+	repo?: string;
 	type: string;
 	ctaType: string;
 	buttonText: string;
@@ -19,6 +20,7 @@ type ContentBlockProps = {
 };
 
 const ContentBlock: FC<ContentBlockProps> = ({
+	repo = 'default',
 	type,
 	buttonText,
 	buttonColour,
@@ -39,6 +41,7 @@ const ContentBlock: FC<ContentBlockProps> = ({
 
 		if (text) {
 			return <CallToAction
+				repo={repo}
 				onClick={onClick}
 				href={href}
 				imageUrl={imageSrc}
