@@ -386,5 +386,5 @@ module.exports = {
       borderWidth: ['first', 'last'],
     },
   },
-  plugins: [require('@tailwindcss/line-clamp')],
+  plugins: [require('@tailwindcss/typography')],
 }
