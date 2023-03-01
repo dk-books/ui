@@ -116,8 +116,10 @@ const Button: React.FC<ButtonProps> = ({
 		buttonClass = `${fontColor[pickFontColor]} ${buttonWidth}`;
 	}
 
+	let divAdd: string;
 	if (dropdown) {
 		const iconDisplay = icon ? <Icons icon={icon} /> : null;
+		divAdd = 'h-full';
 		ctas.push(
 			<button
 				onClick={onClick}
@@ -135,21 +137,23 @@ const Button: React.FC<ButtonProps> = ({
 		);
 	} else {
 		const backButtonStyle = path ? '' : buttonRepo(repo, 'button', colour);
-
-		ctas.push(<div className={`flex	${backButtonStyle} ${classnames!}	${buttonClass!}`}>
-			{icon ? (<div className='items-center justify-center pr-2'><Icons icon={icon} /></div>) : null}
-			{children && href ? <div className='mx-auto w-full'>{buttonHref(href, text)}</div> : null}
-			{path ? <>{pathOnly(path, externalLink)}</> : null}
-		</div>,
+		ctas.push(
+			<>
+				<div className={`flex	${backButtonStyle} ${classnames!}	${buttonClass!}`}>
+					{icon ? (<div className='items-center justify-center pr-2'><Icons icon={icon} /></div>) : null}
+					{children && href ? <div className='mx-auto w-full'>{buttonHref(href, text)}</div> : null}
+					{path ? <>{pathOnly(path, externalLink)}</> : null}
+				</div>
+			</>,
 		);
 	}
 
 	return (
-		<div>
+		<>
 			{ctas.map((node: ReactNode, i: number) => (
-				<div key={i}>{node}</div>
+				<div key={i} className={divAdd}>{node}</div>
 			))}
-		</div>
+		</>
 	);
 };
 
