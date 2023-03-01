@@ -60,7 +60,7 @@ const Button: React.FC<ButtonProps> = ({
 	const buttonRepo = (repo: string, type: string, colour: string) => {
 		switch (repo) {
 			case 'dklearning':
-				return `${dklBtn[type]} ${dklBtn[colour]}`;
+				return `${dklBtn[type]} ${dklBtn[colour]} `;
 			case 'efe':
 				return `${efeBtn[type]} ${efeBtn[colour]}`;
 			default:
@@ -81,96 +81,61 @@ const Button: React.FC<ButtonProps> = ({
 		}
 	};
 
-	if (dropdown) {
-		const iconDisplay = icon ? <Icons icon={icon} /> : null;
-		return (
-			<button
-				onClick={onClick}
-				className={`flex flex-grow h-full items-center px-4.5 text-gray-450
-      any-hover:hover:text-black font-medium`}>
-				{iconDisplay}
-				{text}
-				<img
-					className={`w-2.5 ml-3 transform any-hover:group-hover:rotate-180
-        transition-transform`}
-					src='/svgs/arrow-down.svg'
-					alt='expand'
-				/>
-			</button>
-		);
-	}
+	const ctas: ReactNode[] = [];
 
-	// Icon with text href
-	if (text && href) {
-		const buttonWidth = buttonwidth(layout);
-		let buttonClass = null;
-
-		if (colour) {
-			const pickFontColor = 'white';
-			buttonClass = `${efeBtn.default} ${fontColor[pickFontColor]} ${buttonWidth}`;
+	const buttonHref = (href: string | undefined, text?: string) => {
+		if (href) {
+			return <a href={href} onClick={() => {
+				googleAnalyticsTracking(text, category);
+			}
+			} aria-controls={ariaControls} target={newTab}>
+				{children}
+			</a>;
 		}
 
-		return (
-			<div className={`
-				${buttonRepo(repo, 'button', colour)}
-				${buttonClass!}
-				`}>
-				{icon ? (<div className='items-center justify-center pr-2'><Icons icon={icon} /></div>) : null}
-				<div className='mx-auto w-full'>
-					<a href={href} onClick={() => {
-						googleAnalyticsTracking(text, category);
-					}
-					} aria-controls={ariaControls} target={newTab}>
-						{text}
-					</a>
-				</div>
-			</div>
-		);
-	}
+		return '1ssss';
+	};
 
-	// A href Path only
-	if (path) {
-		return (
-			<div className='flex'>
-				{icon ? <div className='pl-4 pt-1'><div className='relative h-7 w-7'><Icons icon={icon} /></div></div> : null}
-				<a href={path}
-					rel='noreferrer'
-					target={externalLink ? '_blank' : ''}
-					className={`
-					block pl-5 py-2 pr-12 whitespace-nowrap text-14
-					text-gray-450 any-hover:hover:text-black
-					any-hover:hover:underline cursor-pointer`}>
+	const pathOnly = (path: string | undefined, externalLink?: boolean) => {
+		if (path) {
+			return (<div className='flex'>
+				<a href={path} rel='noreferrer' target={externalLink ? '_blank' : ''} className={'block pl-5 py-2 pr-12 whitespace-nowrap text-14	text-gray-450 any-hover:hover:text-black any-hover:hover:underline cursor-pointer'}>
 					{children}
 				</a>
-			</div>
-		);
+			</div>);
+		}
+
+		return <div>{children}</div>;
+	};
+
+	const buttonWidth = buttonwidth(layout);
+
+	let buttonClass = null;
+	if (colour) {
+		const pickFontColor = 'white';
+		buttonClass = `${fontColor[pickFontColor]} ${buttonWidth}`;
 	}
 
-	// Button Href
-	const defaultCheck = repo === 'efe' ? efeBtn.default : dklBtn.default;
-	const button = (
-		<button className={`
-		  ${buttonRepo(repo, 'button', colour)}
-			${classnames!}
-			${defaultCheck}
-			${wide ? 'w-full' : 'md:auto'}
-		`}>
-			<div className='flex-grow'></div>
-			{icon ? <div className='pr-2'><Icons icon={icon} /></div> : null}
-			<div className='text-ellipsis whitespace-nowrap overflow-hidden'>
-				{children}
-			</div>
-			<div className='flex-grow'></div>
-		</button>
+	const backButtonStyle = path ? '' : buttonRepo(repo, 'button', colour);
+
+	ctas.push(<div className={`flex
+	${backButtonStyle}
+	${classnames!}
+	${buttonClass!}
+	`}>
+		{icon ? (<div className='items-center justify-center pr-2'><Icons icon={icon} /></div>) : null}
+		{children && href ? <div className='mx-auto w-full'>{buttonHref(href, text)}</div> : null}
+		{path ? <>{pathOnly(path, externalLink)}</> : null}
+	</div>,
 	);
 
-	if (href) {
-		return <a href={href} className={`sm:w-full ${wide ? 'w-full' : 'md:inline-block'}`} rel='noreferrer' target={externalLink ? '_blank' : ''}>
-			{button}
-		</a>;
-	}
-
-	return button;
+	return (
+		<div>
+			{ctas.map((node: ReactNode, i: number) => (
+				<div key={i}>{node}</div>
+			))}
+		</div>
+	);
 };
 
 export {Button};

@@ -26,6 +26,7 @@ export const WithIcon = Template.bind({});
 WithIcon.args = {
 	repo: 'efe',
 	children: 'Example Button',
+	href: '/books',
 	colour: 'default',
 	icon: 'computer',
 };
@@ -44,6 +45,7 @@ WithIcon.story = {
 export const EfeWithoutIcon = Template.bind({});
 EfeWithoutIcon.args = {
 	repo: 'efe',
+	href: '/books',
 	children: 'EFE Button',
 	colour: 'green',
 };
@@ -62,9 +64,9 @@ EfeWithoutIcon.story = {
 export const Textonly = Template.bind({});
 Textonly.args = {
 	repo: 'efe',
-	text: 'example Text',
 	href: '/books',
 	newTab: 'true',
+	children: 'Example Text',
 };
 
 Textonly.story = {
@@ -81,11 +83,12 @@ Textonly.story = {
 export const TextIcon = Template.bind({});
 TextIcon.args = {
 	repo: 'efe',
-	text: 'example Text & Icon',
+
 	href: '/books',
 	newTab: 'true',
 	colour: 'red',
-	icon: 'computer',
+	icon: 'book',
+	children: 'example Text & Icon',
 };
 
 TextIcon.story = {

@@ -27,6 +27,7 @@ ExampleButton.args = {
 	repo: 'dklearning',
 	children: 'Dk Learning Button',
 	colour: 'buttonDark',
+	href: '/books',
 };
 
 ExampleButton.story = {

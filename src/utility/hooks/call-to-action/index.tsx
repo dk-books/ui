@@ -22,7 +22,7 @@ type CallToActionProps = {
 };
 
 const CallToAction: FC<CallToActionProps> = ({
-	repo = 'efe',
+	repo = 'default',
 	onClick,
 	imageUrl,
 	href,
@@ -65,10 +65,7 @@ const CallToAction: FC<CallToActionProps> = ({
 
 	if (button) {
 		ctas.push(
-			<div
-				className={`
-        px-1 m-1
-        ${text ? 'absolute bottom-0 w-full' : ''}`}>
+			<div className={`px-1 m-1 ${text ? 'absolute bottom-0 w-full' : ''}`}>
 				<Button
 					repo={repo}
 					colour={button.colour}
