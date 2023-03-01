@@ -84,7 +84,7 @@ TextIcon.args = {
 	text: 'example Text & Icon',
 	href: '/books',
 	newTab: 'true',
-	color: 'blue',
+	colour: 'red',
 	icon: 'computer',
 };
 

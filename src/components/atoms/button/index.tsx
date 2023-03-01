@@ -7,7 +7,6 @@ import * as ga from '../../../utility/ga';
 type ButtonProps = {
 	repo?: string;
 	href?: string;
-	colour?: string;
 	children: ReactNode;
 	icon?: string;
 	wide?: boolean;
@@ -17,7 +16,7 @@ type ButtonProps = {
 	onClick?: () => void;
 	ariaControls?: string;
 	classnames?: string;
-	color?: string;
+	colour?: string;
 	buttonType?: string;
 	layout?: string;
 	tailwindClass?: string;
@@ -60,9 +59,9 @@ const Button: React.FC<ButtonProps> = ({
 	const buttonRepo = (repo: string, type: string, colour: string) => {
 		switch (repo) {
 			case 'dklearning':
-				return dklearning[type] + dklearning[colour];
+				return `${dklearning[type]} ${dklearning[colour]}`;
 			case 'efe':
-				return efe[type] + efe[colour];
+				return `${efe[type]} ${efe[colour]}`;
 			default:
 				return 'py-3 px-6 mx-auto text-center';
 		}
