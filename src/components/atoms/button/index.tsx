@@ -148,10 +148,12 @@ const Button: React.FC<ButtonProps> = ({
 	}
 
 	// Button Href
+	const defaultCheck = repo === 'efe' ? efeBtn.default : dklBtn.default;
 	const button = (
 		<button className={`
 		  ${buttonRepo(repo, 'button', colour)}
 			${classnames!}
+			${defaultCheck}
 			${wide ? 'w-full' : 'md:auto'}
 		`}>
 			<div className='flex-grow'></div>
