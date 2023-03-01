@@ -54,6 +54,7 @@ const ContentBlock: FC<ContentBlockProps> = ({
 		return (
 			<div className='sm:w-[270px] mx-auto md:w-[283px] shadow-xs relative md:mx-2.5 rounded-xl p-5 mb-5'>
 				<SlimCallToAction
+					repo={repo}
 					onClick={onClick}
 					href={href}
 					imageUrl={imageSrc}

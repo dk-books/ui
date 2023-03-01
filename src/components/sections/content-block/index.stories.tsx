@@ -45,6 +45,7 @@ ctaHtml.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5
 
 export const ctaSlim = Template.bind({});
 ctaSlim.args = {
+	repo: 'efe',
 	type: 'Cta',
 	button: {
 		text: 'Get the audio',

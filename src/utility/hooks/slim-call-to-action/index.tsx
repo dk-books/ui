@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {Button} from '../../../components/atoms/button';
-import type {FC} from 'react';
+import type {FC, ReactNode} from 'react';
 
 type SlimCallToActionProps = {
 	repo?: string;
@@ -24,15 +24,42 @@ const SlimCallToAction: FC<SlimCallToActionProps> = ({
 	href,
 	button,
 	externalLink,
-}) => (
-	<div
-		onClick={onClick}
-		className='relative text-center'>
-		{
-			imageUrl && href ? <div><Link href={href}><div className='relative w-full h-[91px]' key={href}><Image src={imageUrl} alt={'image'} layout='fill' objectFit='contain' /></div></Link></div> : null
-		}
-		{button ? <Button repo={repo} wide={true} colour={button.colour} href={href} icon={button.icon} externalLink={externalLink}>{button.text}</Button> : null}
-	</div>
-);
+}) => {
+	const ctas: ReactNode[] = [];
+
+	if (imageUrl && href) {
+		ctas.push(
+			<div className='px-1 m-1 relative w-full h-64'>
+				<Link href={href} key={href}>
+					<div><Image src={imageUrl} alt={imageUrl} layout='fill' objectFit='contain' /></div>
+				</Link>
+			</div>,
+		);
+	}
+
+	if (button) {
+		ctas.push(
+			<Button
+				repo={repo}
+				wide={true}
+				colour={button.colour}
+				href={href}
+				icon={button.icon}
+				externalLink={externalLink}>
+				{button.text}
+			</Button>,
+		);
+	}
+
+	return (
+		<div
+			onClick={onClick}
+			className='relative text-center'>
+			{ctas.map((node: ReactNode, i: number) => (
+				<div key={i}>{node}</div>
+			))}
+		</div>
+	);
+};
 
 export {SlimCallToAction};
