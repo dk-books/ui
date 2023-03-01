@@ -1,7 +1,9 @@
 import React from 'react';
 import type {FC, ReactNode} from 'react';
 import {Icons} from '../icons';
-import {dklearning, efe, fontColor} from '../../../utility/themes/themes';
+import {fontColor} from '../../../utility/themes/themes';
+import {dklBtn} from '../../../utility/themes/dkl/theme';
+import {efeBtn} from '../../../utility/themes/efe/theme';
 import * as ga from '../../../utility/ga';
 
 type ButtonProps = {
@@ -59,9 +61,9 @@ const Button: React.FC<ButtonProps> = ({
 	const buttonRepo = (repo: string, type: string, colour: string) => {
 		switch (repo) {
 			case 'dklearning':
-				return `${dklearning[type]} ${dklearning[colour]}`;
+				return `${dklBtn[type]} ${dklBtn[colour]}`;
 			case 'efe':
-				return `${efe[type]} ${efe[colour]}`;
+				return `${efeBtn[type]} ${efeBtn[colour]}`;
 			default:
 				return 'py-3 px-6 mx-auto text-center';
 		}
@@ -106,7 +108,7 @@ const Button: React.FC<ButtonProps> = ({
 
 		if (colour) {
 			const pickFontColor = 'white';
-			buttonClass = `${efe.default} ${fontColor[pickFontColor]} ${buttonWidth}`;
+			buttonClass = `${efeBtn.default} ${fontColor[pickFontColor]} ${buttonWidth}`;
 		}
 
 		return (
