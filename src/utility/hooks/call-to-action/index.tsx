@@ -60,7 +60,7 @@ const CallToAction: FC<CallToActionProps> = ({
 	}
 
 	if (text) {
-		ctas.push(<div className='px-1 m-1 sm:text-14 xl:text-18 pb-4' dangerouslySetInnerHTML={createMarkup()}></div>);
+		ctas.push(<div className='px-1 m-1 sm:text-14 xl:text-18 pb-8' dangerouslySetInnerHTML={createMarkup()}></div>);
 	}
 
 	if (button) {
