@@ -116,18 +116,33 @@ const Button: React.FC<ButtonProps> = ({
 		buttonClass = `${fontColor[pickFontColor]} ${buttonWidth}`;
 	}
 
-	const backButtonStyle = path ? '' : buttonRepo(repo, 'button', colour);
+	if (dropdown) {
+		const iconDisplay = icon ? <Icons icon={icon} /> : null;
+		ctas.push(
+			<button
+				onClick={onClick}
+				className={`flex flex-grow h-full items-center px-4.5 text-gray-450
+      any-hover:hover:text-black font-medium`}>
+				{iconDisplay}
+				{children}
+				<img
+					className={`w-2.5 ml-3 transform any-hover:group-hover:rotate-180
+        transition-transform`}
+					src='/svgs/arrow-down.svg'
+					alt='expand'
+				/>
+			</button>,
+		);
+	} else {
+		const backButtonStyle = path ? '' : buttonRepo(repo, 'button', colour);
 
-	ctas.push(<div className={`flex
-	${backButtonStyle}
-	${classnames!}
-	${buttonClass!}
-	`}>
-		{icon ? (<div className='items-center justify-center pr-2'><Icons icon={icon} /></div>) : null}
-		{children && href ? <div className='mx-auto w-full'>{buttonHref(href, text)}</div> : null}
-		{path ? <>{pathOnly(path, externalLink)}</> : null}
-	</div>,
-	);
+		ctas.push(<div className={`flex	${backButtonStyle} ${classnames!}	${buttonClass!}`}>
+			{icon ? (<div className='items-center justify-center pr-2'><Icons icon={icon} /></div>) : null}
+			{children && href ? <div className='mx-auto w-full'>{buttonHref(href, text)}</div> : null}
+			{path ? <>{pathOnly(path, externalLink)}</> : null}
+		</div>,
+		);
+	}
 
 	return (
 		<div>
