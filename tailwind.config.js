@@ -205,6 +205,7 @@ module.exports = {
 			title: ['Avenir Next'],
 		},
 		boxShadow: {
+			xs: '0px 3px 8px rgba(0, 0, 0, 0.12)',
 			sm:
 				'0 1px 1px hsl(0deg 0% 0% / 0.025),0 2px 2px hsl(0deg 0% 0% / 0.025),0 4px 4px hsl(0deg 0% 0% / 0.025),0 8px 8px hsl(0deg 0% 0% / 0.025),0 16px 16px hsl(0deg 0% 0% / 0.025)',
 			// md: '0 4px 8px 0 rgba(0, 0, 0, 0.1)',
@@ -360,10 +361,30 @@ module.exports = {
 		backgroundSize: {
 			'30': '1.275rem'
 		},
-		backgroundPosition: {
-			'xy': '0.45rem 0.45rem',
-			'xy-full-sm': '0.938rem'
-		}
-	},
-	plugins: [require("@tailwindcss/typography")],
+		backgroundSize: {
+      'auto': 'auto',
+      'cover': 'cover',
+      'contain': 'contain',
+      '10%': '10%',
+    },
+  },
+  variants: {
+    extend: {
+      textDecoration: ['group-hover', 'hover', 'active', 'focus-within'],
+      boxShadow: ['group-hover', 'hover', 'active', 'focus-visible'],
+      backgroundColor: ['hover', 'active', 'focus-within'],
+      backgroundOpacity: ['hover'],
+      borderColor: ['hover'],
+      opacity: ['hover', 'group-hover', 'active'],
+      scale: ['hover', 'group-hover'],
+      visibility: ['group-hover'],
+      rotate: ['hover', 'group-hover'],
+      outline: ['focus'],
+      maxWidth: ['hover', 'group-hover'],
+      margin: ['first'],
+      padding: ['first'],
+      borderWidth: ['first', 'last'],
+    },
+  },
+  plugins: [require('@tailwindcss/line-clamp')],
 }
