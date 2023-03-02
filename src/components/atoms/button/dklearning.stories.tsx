@@ -27,7 +27,6 @@ ExampleButton.args = {
 	repo: 'dklearning',
 	children: 'Save',
 	colour: 'buttonDark',
-	href: '/books',
 	type: 'submit',
 };
 
