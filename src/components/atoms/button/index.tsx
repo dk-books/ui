@@ -72,12 +72,10 @@ const Button: React.FC<ButtonProps> = ({
 	const buttonwidth = (size: string | undefined) => {
 		const width = size === 'four_column' ? 'lg:w243 lg:h49 mobile:w240 mobile:h49 w-full' : 'lg:w243 lg:h49 sm:w240 sm:h49 md:w-185 md:h-49 lg:w-315 lg:h49';
 		switch (buttonType) {
-			case 'advert':
-				return width;
 			case 'promo':
 				return 'md:w-128 md:h-43';
 			default:
-				return 'md:h-44 ' + width;
+				return width;
 		}
 	};
 
