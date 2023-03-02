@@ -25,9 +25,10 @@ const Template: ComponentStory<typeof Button> = args => (
 export const ExampleButton = Template.bind({});
 ExampleButton.args = {
 	repo: 'dklearning',
-	children: 'Dk Learning Button',
+	children: 'Save',
 	colour: 'buttonDark',
 	href: '/books',
+	type: 'submit',
 };
 
 ExampleButton.story = {

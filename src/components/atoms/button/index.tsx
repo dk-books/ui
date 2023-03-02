@@ -26,6 +26,7 @@ type ButtonProps = {
 	text?: string;
 	path?: string;
 	dropdown?: boolean;
+	type?: string;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -46,6 +47,7 @@ const Button: React.FC<ButtonProps> = ({
 	path,
 	dropdown,
 	onClick,
+	type,
 }) => {
 	/** GA tracking */
 	const googleAnalyticsTracking = (item?: string, category?: string | undefined) => {
@@ -81,9 +83,12 @@ const Button: React.FC<ButtonProps> = ({
 
 	const ctas: ReactNode[] = [];
 
-	const buttonHref = (href: string | undefined, text?: string) => {
-		if (href) {
-			return <a href={href} onClick={() => {
+	const buttonHref = (href: string | undefined, text?: string, type?: string) => {
+		let buttonType;
+		if (type) {
+			buttonType = <button className='button button-dark' type='submit'>{children}</button>;
+		} else {
+			buttonType = <a href={href} onClick={() => {
 				googleAnalyticsTracking(text, category);
 			}
 			} aria-controls={ariaControls} target={newTab}>
@@ -91,7 +96,7 @@ const Button: React.FC<ButtonProps> = ({
 			</a>;
 		}
 
-		return '1ssss';
+		return buttonType;
 	};
 
 	const pathOnly = (path: string | undefined, externalLink?: boolean) => {
@@ -139,7 +144,7 @@ const Button: React.FC<ButtonProps> = ({
 			<>
 				<div className={`flex	${backButtonStyle} ${classnames!}	${buttonClass!}`}>
 					{icon ? (<div className='items-center justify-center pr-2'><Icons icon={icon} /></div>) : null}
-					{href && children ? <div className='mx-auto w-full text-ellipsis whitespace-nowrap overflow-hidden'>{buttonHref(href, text)}</div> : null}
+					{href && children ? <div className='mx-auto w-full text-ellipsis whitespace-nowrap overflow-hidden'>{buttonHref(href, text, type)}</div> : null}
 					{path ? <>{pathOnly(path, externalLink)}</> : null}
 					{!path && !href ? <>{children}</> : null}
 				</div>
