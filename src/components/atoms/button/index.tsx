@@ -86,7 +86,7 @@ const Button: React.FC<ButtonProps> = ({
 	const buttonHref = (href: string | undefined, text?: string, type?: 'button' | 'submit' | 'reset') => {
 		let buttonType;
 		if (type) {
-			buttonType = <button className='button button-dark' onClick={onClick ? onClick : undefined } type={type}>{children}</button>;
+			buttonType = onClick ? <button className='button button-dark' onClick={onClick} type={type}>{children}</button> : <button className='button button-dark' type={type}>{children}</button>;
 		} else {
 			buttonType = <a href={href} onClick={() => {
 				googleAnalyticsTracking(text, category);
