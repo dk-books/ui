@@ -49,7 +49,7 @@ const SlimCallToAction: FC<SlimCallToActionProps> = ({
 				icon={button.icon}
 				externalLink={externalLink}
 				layout={button?.layout}
-				>
+			>
 				{button.text}
 			</Button>,
 		);

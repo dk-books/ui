@@ -101,15 +101,15 @@ TextIcon.story = {
 	},
 };
 
-export const LinkWithIcon = Template.bind({});
-LinkWithIcon.args = {
+export const FourColumnLink = Template.bind({});
+FourColumnLink.args = {
 	repo: 'efe',
-	children: 'Example Link with Text & Icon',
-	path: '/books',
-	icon: 'computer',
+	children: 'Buy from McNally Robinson',
+	href: '/books',
+	layout: 'four_column',
 };
 
-LinkWithIcon.story = {
+FourColumnLink.story = {
 	parameters: {
 		nextRouter: {
 			path: '/',
