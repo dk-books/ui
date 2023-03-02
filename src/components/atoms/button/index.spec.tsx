@@ -5,8 +5,6 @@ import {Button} from '.';
 describe('Button', () => {
 	it('renders optional icon', () => {
 		render(<Button icon={'download'} href='/book'>children</Button>);
-
-		const icon = screen.getByText('children');
-		expect(icon).toBeInTheDocument();
+		expect(screen.getByRole('img')).toHaveAttribute('alt', 'Icon description');
 	});
 });

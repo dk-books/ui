@@ -45,7 +45,6 @@ WithIcon.story = {
 export const EfeWithoutIcon = Template.bind({});
 EfeWithoutIcon.args = {
 	repo: 'efe',
-	href: '/books',
 	children: 'EFE Button',
 	colour: 'green',
 };
