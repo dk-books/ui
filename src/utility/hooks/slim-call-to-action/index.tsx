@@ -13,6 +13,7 @@ type SlimCallToActionProps = {
 		colour?: string;
 		icon?: string;
 		text?: string;
+		layout?: string;
 	};
 	externalLink?: boolean;
 };
@@ -46,7 +47,9 @@ const SlimCallToAction: FC<SlimCallToActionProps> = ({
 				colour={button.colour}
 				href={href}
 				icon={button.icon}
-				externalLink={externalLink}>
+				externalLink={externalLink}
+				layout={button?.layout}
+				>
 				{button.text}
 			</Button>,
 		);

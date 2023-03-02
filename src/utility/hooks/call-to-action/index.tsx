@@ -16,6 +16,7 @@ type CallToActionProps = {
 		colour?: string;
 		icon?: string;
 		text?: string;
+		layout?: string;
 	};
 	alignContents?: 'left' | 'center';
 	externalLink?: boolean;
@@ -71,7 +72,8 @@ const CallToAction: FC<CallToActionProps> = ({
 					colour={button.colour}
 					href={href}
 					icon={button.icon}
-					externalLink={externalLink}>
+					externalLink={externalLink}
+					layout={button?.layout}>
 					{button.text}
 				</Button>
 			</div>,
