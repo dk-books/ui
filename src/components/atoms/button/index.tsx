@@ -83,10 +83,12 @@ const Button: React.FC<ButtonProps> = ({
 
 	const ctas: ReactNode[] = [];
 
-	const buttonHref = (href: string | undefined, text?: string, type?: 'button' | 'submit' | 'reset') => {
+	const buttonHref = (href: string | undefined, text?: string, type?: 'button' | 'submit' | 'reset', classnames?: string) => {
 		let buttonType;
+		const classNameList = classnames ? `button button-dark ${classnames}` : 'button button-dark';
+
 		if (type) {
-			buttonType = onClick ? <button className='button button-dark' onClick={onClick} type={type}>{children}</button> : <button className='button button-dark' type={type}>{children}</button>;
+			buttonType = onClick ? <button className={classNameList} onClick={onClick} type={type}>{children}</button> : <button className={classNameList} type={type}>{children}</button>;
 		} else {
 			buttonType = <a href={href} onClick={() => {
 				googleAnalyticsTracking(text, category);
