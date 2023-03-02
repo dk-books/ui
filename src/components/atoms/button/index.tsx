@@ -70,7 +70,7 @@ const Button: React.FC<ButtonProps> = ({
 
 	// Repo Button width
 	const buttonwidth = (size: string | undefined) => {
-		const width = size === 'four_column' ? 'lg:w243 lg:h49 mobile:w240 mobile:h49' : 'lg:w243 lg:h49 sm:w240 sm:h49 md:w-185 md:h-49 lg:w-315 lg:h49';
+		const width = size === 'four_column' ? 'lg:w243 lg:h49 mobile:w240 mobile:h49 w-full' : 'lg:w243 lg:h49 sm:w240 sm:h49 md:w-185 md:h-49 lg:w-315 lg:h49';
 		switch (buttonType) {
 			case 'advert':
 				return width;
