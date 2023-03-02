@@ -26,7 +26,7 @@ type ButtonProps = {
 	text?: string;
 	path?: string;
 	dropdown?: boolean;
-	type?: string;
+	type?: 'button' | 'submit' | 'reset';
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -83,10 +83,10 @@ const Button: React.FC<ButtonProps> = ({
 
 	const ctas: ReactNode[] = [];
 
-	const buttonHref = (href: string | undefined, text?: string, type?: string) => {
+	const buttonHref = (href: string | undefined, text?: string, type?: 'button' | 'submit' | 'reset') => {
 		let buttonType;
 		if (type) {
-			buttonType = <button className='button button-dark' type='submit'>{children}</button>;
+			buttonType = <button className='button button-dark' onClick={onClick ? onClick : undefined } type={type}>{children}</button>;
 		} else {
 			buttonType = <a href={href} onClick={() => {
 				googleAnalyticsTracking(text, category);
