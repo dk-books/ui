@@ -33,10 +33,10 @@ export const Checkbox: React.FC<CheckBoxProps> = ({customId, register, defaultCh
 						defaultChecked={defaultChecked ? defaultChecked : false}
 						id={customId}
 						type='checkbox'
-						className={`w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 ${errorColor} ${checkBoxClassName ? checkBoxClassName : ''}`}
+						className={`w-4 h-4 text-blue-600 bg-grayscale-300 rounded border-grayscale-light focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-grayscale-700 focus:ring-2 dark:bg-grayscale-700 dark:border-grayscale-dark ${errorColor} ${checkBoxClassName ? checkBoxClassName : ''}`}
 						{...register}
 					/>
-					{children && <label className={'ml-2 text-14 font-medium text-gray-300'}>{children}</label>}
+					{children && <label className={'ml-2 text-14 font-medium text-grayscale-700'}>{children}</label>}
 				</div>
 			</div>
 			{placeholder && <div className='flex items-center'><div className='form-check'><div className={'ml-6 text-14 font-medium text-neutrals-3 text-12 font-light'}>{placeholder}</div></div></div>}

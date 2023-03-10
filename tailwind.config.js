@@ -88,6 +88,14 @@ module.exports = {
 				menu: 'width, inset',
 			},
 			colors: {
+				efe:{
+					grayscale:{
+						'300': "#F3F3F3",
+					},
+					red:{
+						'300': "#E63338"
+					}
+				},
 				'book-red': '#e63338',
 				'book-orange': '#ef7f16',
 				'book-bright-orange': '#F4C233',
@@ -109,7 +117,6 @@ module.exports = {
 					'350': '#C4C2C4',
 					'400': '#b7b7b7',
 					'410': '#999999',
-					'450': '#666666',
 					'500': '#686867',
 					'550': '#dddddd',
 					'600': '#333333',
@@ -235,7 +242,6 @@ module.exports = {
 				'200': '#e0e0e0',
 				'300': '#666666',
 				'400': '#b7b7b7',
-				'450': '#666666',
 				'500': '#686867',
 				'550': '#dddddd',
 				'600': '#333333',
@@ -243,15 +249,15 @@ module.exports = {
 				'800': '#4a4a4a',
 			},
 			grayscale:{
-				'100': '#FFFFFF',
-				'200': '#FBFBFB',
-				'300': '#F5F5F5',
-				'400': '#EBEBEB',
-				'500': '#CCCCCC',
-				'600': '#999999',
-				'700': '#666666',
-				'800': '#333333',
 				'900': '#000000',
+				'800': '#333333',
+				'700': '#666666',
+				'600': '#999999',
+				'500': '#CCCCCC',
+				'400': '#EBEBEB',
+				'300': '#F5F5F5',
+				'200': '#FBFBFB',
+				'100': '#FFFFFF',
 			},
 			blue: {
 				'100': '#e6f3f9',
@@ -365,8 +371,12 @@ module.exports = {
 			'70': '70px',
 		},
 		borderColor: {
-			'gray-dark': '#ddd',
-			'gray-light': '#EBEBEB',
+			grayscale:{
+				'dark': '#666666',
+				'light': '#EBEBEB',
+			},
+			'gray-dark': '#EBEBEB',
+			'gray-light': '#666666',
 			'red-light': '#E63338',
 			'orange-light': '#FFC100',
 			'red3': '#E63338',
