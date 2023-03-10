@@ -16,19 +16,19 @@ const Dropdown: FC<DropdownProps> = ({
 		<div className={`
 			before:bg-triangle
 			before:bg-center
-				before:clear-both
-				before:relative
-				before:block
-				before:content-['']
-				before:w-[22px]
-				before:h-[12px]
-				before:bg-[length:22px]
-				before:-translate-x-2/4
-				before:top-[-11px]
-				before:left-[50%]
-				box-content border rounded-xl border-gray-light shadow-xl bg-white
-				text-black origin-top transition delay-100
-				${open ? 'rotateX-0' : 'rotateX-90'}
+			before:clear-both
+			before:relative
+			before:block
+			before:content-['']
+			before:w-[22px]
+			before:h-[12px]
+			before:bg-[length:22px]
+			before:-translate-x-2/4
+			before:top-[-11px]
+			before:left-[50%]
+			box-content border rounded-xl border-grayscale-light shadow-xl bg-grayscale-100
+			text-grayscale-900 origin-top transition delay-100
+			${open ? 'rotateX-0' : 'rotateX-90'}
 			`}>
 			{children}
 		</div>
