@@ -1,5 +1,5 @@
 export const dklBtn: (Record<string, string>) = {
-	button: 'font-medium inline-flex justify-center items-center sm:justify-center w-full rounded-full any-hover:hover:underline active:underline any-hover:hover:shadow-md active:shadow-md transition-all mobile-click-clear;',
+	button: 'font-medium inline-flex justify-center items-center sm:justify-center sm:w-full rounded-full any-hover:hover:underline active:underline any-hover:hover:shadow-md active:shadow-md transition-all mobile-click-clear;',
 	buttonDark: 'bg-blue-500 text-white any-hover:hover:bg-blue-700 active:bg-blue-700',
 	buttonLight: 'bg-blue-100 text-blue-700 any-hover:hover:bg-blue-300 active:bg-blue-300',
 	buttonWhite: 'bg-white border any-hover:hover:bg-gray-300',
