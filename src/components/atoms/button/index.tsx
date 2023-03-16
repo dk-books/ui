@@ -90,7 +90,7 @@ const Button: React.FC<ButtonProps> = ({
 		if (type) {
 			buttonType = onClick ? <button className={classNameList} onClick={onClick} type={type}>{children}</button> : <button className={classNameList} type={type}>{children}</button>;
 		} else {
-			buttonType = <a href={href} onClick={() => {
+			buttonType = <a href={href} className={'px-6 py-3'} onClick={() => {
 				googleAnalyticsTracking(text, category);
 			}
 			} aria-controls={ariaControls} target={newTab}>
