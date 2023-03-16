@@ -146,7 +146,7 @@ const Button: React.FC<ButtonProps> = ({
 			<>
 				<div className={`flex	${backButtonStyle} ${classnames!}	${buttonClass!}`}>
 					{icon ? (<div className='items-center justify-center pr-2'><Icons icon={icon} /></div>) : null}
-					{((href ?? type) && children) ? <div className='mx-auto w-full text-ellipsis whitespace-nowrap overflow-hidden h-full w-full'>{buttonHref(href, text, type, classnames)}</div> : null}
+					{((href ?? type) && children) ? <div className='mx-auto h-full w-full text-ellipsis whitespace-nowrap overflow-hidden flex items-center'>{buttonHref(href, text, type, classnames)}</div> : null}
 					{path ? <>{pathOnly(path, externalLink)}</> : null}
 					{!path && !href && !type ? <>{children}</> : null}
 				</div>
