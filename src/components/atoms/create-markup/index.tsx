@@ -1,10 +1,15 @@
 import React from 'react';
-import DOMPurify from 'dompurify';
 
 export type CreateMarkupProps = {
 	children: string;
 };
 
-export const CreateMarkup: React.FC<CreateMarkupProps> = ({children, ...props}: CreateMarkupProps) => (
-	<div dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(children)}}/>
-);
+export const CreateMarkup: React.FC<CreateMarkupProps> = ({children, ...props}: CreateMarkupProps) => {
+	const createMarkup = () => (
+		{__html: children}
+	);
+
+	return (
+		<div dangerouslySetInnerHTML={createMarkup()} />
+	);
+};
