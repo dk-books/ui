@@ -147,7 +147,7 @@ const Button: React.FC<ButtonProps> = ({
 		ctas.push(
 			<>
 				<div className={`flex	${backButtonStyle} ${classnames!}	${buttonClass!}`}>
-					{icon ? (<div className='items-center justify-center pr-2'><Icons icon={icon} /></div>) : null}
+					{icon && dropdown ? (<div className='items-center justify-center pl-5 pr-2'><Icons icon={icon} /></div>) : <div className='items-center justify-center pr-2'><Icons icon={icon} /></div>}
 					{((href ?? type) && children) ? <div className='mx-auto h-full w-full text-ellipsis whitespace-nowrap overflow-hidden flex items-center'>{buttonHref(href, text, type, classnames)}</div> : null}
 					{path ? <>{pathOnly(path, externalLink)}</> : null}
 					{!path && !href && !type ? <>{children}</> : null}
