@@ -34,14 +34,14 @@ const Icons: FC<IconsScheme> = ({icon, url, width, height, description}) => {
 	}
 
 	return (
-		<div className='relative h-5 w-5 icon'>
-			{iconUrl ? <Image
+		<>
+			{iconUrl ? <div className='relative h-5 w-5 icon'><Image
 				src={iconUrl}
 				alt={description ? description : 'Icon description'}
 				width={width ? width : 100}
 				height={height ? height : 100}
-			/> : null}
-		</div>
+			/></div> : null}
+		</>
 	);
 };
 

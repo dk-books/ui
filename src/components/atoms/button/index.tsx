@@ -92,7 +92,7 @@ const Button: React.FC<ButtonProps> = ({
 		if (type) {
 			buttonType = onClick ? <button className={classNameList} onClick={onClick} type={type}>{children}</button> : <button className={classNameList} type={type}>{children}</button>;
 		} else {
-			buttonType = <a href={href} className={'px-6 py-3'} onClick={() => {
+			buttonType = <a href={href} onClick={() => {
 				googleAnalyticsTracking(text, category);
 			}
 			} aria-controls={ariaControls} target={newTab}>
@@ -147,7 +147,8 @@ const Button: React.FC<ButtonProps> = ({
 		ctas.push(
 			<>
 				<div className={`flex	${backButtonStyle} ${classnames!}	${buttonClass!}`}>
-					{icon && dropdown ? (<div className='items-center justify-center pl-5 pr-2'><Icons icon={icon} /></div>) : <div className='items-center justify-center pr-2'><Icons icon={icon} /></div>}
+					{icon && dropdown ? (<div className='items-center justify-center pl-5 pr-2'><Icons icon={icon} /></div>) : null}
+					{icon && !dropdown ? (<div className='items-center justify-center pr-2'><Icons icon={icon} /></div>) : null}
 					{((href ?? type) && children) ? <div className='mx-auto h-full w-full text-ellipsis whitespace-nowrap overflow-hidden flex items-center'>{buttonHref(href, text, type, classnames)}</div> : null}
 					{path ? <>{pathOnly(path, externalLink)}</> : null}
 					{!path && !href && !type ? <>{children}</> : null}
