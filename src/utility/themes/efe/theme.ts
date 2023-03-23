@@ -14,6 +14,7 @@ export const efeBtn: (Record<string, string>) = {
 
 export const fontColor: (Record<string, string>) = {
 	white: 'text-white inline-flex items-center',
+	gray: 'text-gray-450 inline-flex items-center',
 	black: 'text-black inline-flex items-center',
 	default: 'text-black inline-flex items-center',
 };
