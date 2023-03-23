@@ -125,7 +125,7 @@ const Button: React.FC<ButtonProps> = ({
 
 	let divAdd: string;
 	if (dropdown) {
-		const iconDisplay = icon ? <div className='pr-2 pt-2'><Icons icon={icon} /></div> : null;
+		const iconDisplay = icon ? <div><Icons icon={icon} /></div> : null;
 		divAdd = 'h-full';
 		ctas.push(
 			<button
