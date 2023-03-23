@@ -27,6 +27,7 @@ type ButtonProps = {
 	path?: string;
 	dropdown?: boolean;
 	type?: 'button' | 'submit' | 'reset';
+	fontColorText?: string;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -48,6 +49,7 @@ const Button: React.FC<ButtonProps> = ({
 	dropdown,
 	onClick,
 	type,
+	fontColorText,
 }) => {
 	/** GA tracking */
 	const googleAnalyticsTracking = (item?: string, category?: string | undefined) => {
@@ -117,7 +119,7 @@ const Button: React.FC<ButtonProps> = ({
 
 	let buttonClass = null;
 	if (colour) {
-		const pickFontColor = 'white';
+		const pickFontColor = fontColorText ? fontColorText : 'white';
 		buttonClass = `${fontColor[pickFontColor]} ${buttonWidth}`;
 	}
 
