@@ -130,7 +130,7 @@ const Button: React.FC<ButtonProps> = ({
 		ctas.push(
 			<button
 				onClick={onClick}
-				className={`flex flex-grow h-full items-center px-4.5 grayscale-700
+				className={`items-center justify-center flex flex-grow h-full items-center px-4.5 grayscale-700
       any-hover:hover:text-black font-medium`}>
 				{iconDisplay}
 				{children}
