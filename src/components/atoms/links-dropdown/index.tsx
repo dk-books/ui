@@ -47,7 +47,7 @@ const LinksDropdown: FC<LinksDropdownProps> = ({
 				button={button}>
 				<div className='flex'>
 					{columns.map((linksInColumn: DropdownLink[], columnNo: number) => (
-						<div className='py-2' key={columnNo}>
+						<div className='pl-4 pt-1' key={columnNo}>
 							{linksInColumn ? linksInColumn.map(link => (
 								<div
 									key={link.title}
