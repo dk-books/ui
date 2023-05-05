@@ -30,7 +30,7 @@ jobs:
       - name: Publish
         run: npm run release -- --gh-pages
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.UI_NPM_TOKEN_APRIL_2023 }}
+          NODE_AUTH_TOKEN: ${{ secrets.GPR_ACCESS_TOKEN_APRIL_2023 }}
 
       # - name: Deploy to GitHub Pages
       #   id: deployment
