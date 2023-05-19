@@ -9,6 +9,6 @@ export const dklBtn: (Record<string, string>) = {
 	buttonyellow: 'bg-yellow-600 text-white any-hover:hover:bg-yellow-700',
 	buttongreen: 'bg-green-700 text-white any-hover:hover:bg-green-800;',
 	buttonblue: 'bg-blue-950 text-white any-hover:hover:bg-blue-1050;',
-	buttonpurple: 'bg-purple-300 text-white any-hover:hover:bg-purple-400 active:bg-blue-700;',
+	buttonpurple: 'bg-dkl-purple-600 text-white any-hover:hover:bg-dkl-purple-800 active:bg-blue-700;',
 	default: 'text-sm bg-blue-500 text-white any-hover:hover:bg-blue-700 active:bg-blue-700',
 };
