@@ -5,7 +5,7 @@ export const dklBtn: (Record<string, string>) = {
 	buttonWhite: 'bg-white border any-hover:hover:bg-gray-300',
 	buttonPink: 'bg-red-200 text-red-700 any-hover:hover:bg-red-300',
 	buttonRed: 'bg-red-600 text-white any-hover:hover:bg-red-700',
-	buttonorange: 'bg-orange-600 text-white any-hover:hover:bg-orange-700',
+	buttonorange: 'bg-orange-900 text-white any-hover:hover:bg-orange-700',
 	buttonyellow: 'bg-yellow-600 text-white any-hover:hover:bg-yellow-700',
 	buttongreen: 'bg-green-700 text-white any-hover:hover:bg-green-800;',
 	buttonblue: 'bg-blue-950 text-white any-hover:hover:bg-blue-1050;',
