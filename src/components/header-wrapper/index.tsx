@@ -40,13 +40,13 @@ const HeaderWrapper: FC<HeaderWrapperProps> = ({
 			className={`
 				${sticky ? 'sticky top-0' : ''}
 				w-full sm:shadow-md md:shadow-md lg:shadow-sm
-				md:mr-10 bg-white flex z-30 h-17.75`}>
+				md:mr-10 bg-grayscale-100 flex z-30 h-17.75`}>
 			{branding}
 			<div className='flex-grow'></div>
 			{children}
 			<nav className={`
 				${(mobileNavEnabled && mobileNavOpen) ? 'opacity-100 rotateX-0 visible' : 'invisible opacity-30 rotateX-90'}
-				absolute w-full top-full lg:hidden left-0 shadow-md z-10 bg-white
+				absolute w-full top-full lg:hidden left-0 shadow-md z-10 bg-grayscale-100
 				transform origin-top transition
 			`}>
 				{mobileNav}

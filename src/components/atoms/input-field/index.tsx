@@ -26,7 +26,7 @@ export const InputField: React.FC<InputFieldProps> = ({children, register, place
 			{children && <label {...props} className='mr-3'>{children}</label>}
 			<div>
 				<input {...input}
-					className={`w-283 sm:w-275 h-49 rounded-lg p-3 bg-white border-2 justify-center focus:bg-gray-ccc focus:text-black 
+					className={`w-283 sm:w-275 h-49 rounded-lg p-3 bg-grayscale-100 border-2 justify-center focus:bg-gray-ccc focus:text-black 
 					focus:border-blue3 ${errorColor}`}
 					placeholder={placeholder}
 					{...register}

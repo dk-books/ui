@@ -99,8 +99,6 @@ module.exports = {
 				dkl:{
 					blue: '#0085c8'
 				},
-				white: '#fff',
-				whiteTransparent: '#fffffff2',
 				black: {
 					'300': '#000',
 					'500': '#2a322a',

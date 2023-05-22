@@ -12,8 +12,8 @@ const ToolTip: FC<ToolTipProps> = ({
 
 	return (
 		<div className={`${closeToolTip ? 'hidden' : ''} absolute left-0 w-full max-w-[220px] z-10 m-1`}>
-			<div className='shadow-arrow absolute w-5 h-5 left-16 top-[2px] bg-white rotate-45 z-10'></div>
-			<div className={'flex whitespace-normal text-left mt-3 relative bg-white border rounded py-3 pl-3 pr-8 shadow-error border-gray-dark min-h-[50px]'}>
+			<div className='shadow-arrow absolute w-5 h-5 left-16 top-[2px] bg-grayscale-100 rotate-45 z-10'></div>
+			<div className={'flex whitespace-normal text-left mt-3 relative bg-grayscale-100 border rounded py-3 pl-3 pr-8 shadow-error border-gray-dark min-h-[50px]'}>
 				<p>{message}</p>
 			</div>
 			<button onClick={() => {
