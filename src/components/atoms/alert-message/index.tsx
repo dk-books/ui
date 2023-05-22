@@ -13,7 +13,7 @@ const AlertMessage: FC<AlertMessageProps> = ({
 	<>
 		{successMessage && (
 			<div
-				className={'w-auto inline-block mt-8 rounded-xl border border-green-500 bg-green-100 xl:text-14 lg:text-12 md:text-12 sm:text-12 flex justify-center'}>
+				className={'w-auto inline-block mt-8 rounded-xl border border-green-500 bg-alert-success xl:text-14 lg:text-12 md:text-12 sm:text-12 flex justify-center'}>
 				<span
 					className={'font-medium	 text-green-600 px-5 py-2.5 leading-5'}>
 					{successMessage}

@@ -1,7 +1,7 @@
 export const efeBtn: (Record<string, string>) = {
 	button: 'sm:w-full flex sm:text-14 text-16 xl:text-18 text-white rounded-lg items-center py-3 px-6 text-lg py-3 px-6 mx-auto text-center items-center rounded-lg mx-0 whitespace-nowrap',
 	blue: 'bg-blue-350 hover:bg-blue-300',
-	green: 'bg-green-350 hover:bg-green-50',
+	green: 'bg-green-700 hover:bg-green-900',
 	red: 'bg-red-300 hover:bg-red-550',
 	orange: 'bg-orange-700 hover:bg-orange-900',
 	black: 'bg-black-300 hover:bg-black-500',

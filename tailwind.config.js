@@ -96,16 +96,8 @@ module.exports = {
 						'300': "#E63338"
 					}
 				},
-				dkl:{
-					purple: {
-						'800': '#522a6f',
-						'600': '#8d3e8b',
-					},
-					yellow: {
-						'100': '#fbfbe5',
-						'500': '#ffc100'
-					},
-				},
+				// dkl:{
+				// },
 				white: '#fff',
 				whiteTransparent: '#fffffff2',
 				black: {
@@ -155,18 +147,6 @@ module.exports = {
 					'970': '#d1ebfd',
 					'980': '#0b3f65',
 					'990': '#76c2f8',
-				},
-				green: {
-					'50': '#61760d',
-					'100': '#edf5ee',
-					'200': '#dce8de',
-					'250': '#00a890',
-					'300': '#4ea057',
-					'350': '#a2c516',
-					'400': '#7ac943',
-					'500': '#95c69a',
-					'600': '#0c5c14',
-					'800': '#f2f099',
 				},
 				red: {
 					'50': '#ffedee',
@@ -228,6 +208,7 @@ module.exports = {
 				'-4px -5px 6px 0 rgb(0 0 0 / 10%)'
 		},
 		colors: {
+			// default color palettes
 			grayscale:{
 				'900': '#000000',
 				'800': '#333333',
@@ -260,6 +241,17 @@ module.exports = {
 				'300': '#CCECE7',
 				'200': '#DEF3F0',
 				'100': '#F2FAF9',
+			},
+			green: {
+				'900': '#61760D',
+				'800': '#819F11',
+				'700': '#A2C516',
+				'600': '#B4D044',
+				'500': '#C6DB72',
+				'400': '#DAE8A2',
+				'300': '#E9F0CD',
+				'200': '#F2F6E4',
+				'100': '#F7F8F0',
 			},
 			yellow: {
 				'900': '#C2A801',
@@ -304,6 +296,11 @@ module.exports = {
 				'300': '#FFDCE9',
 				'200': '#FFEEF4',
 				'100': '#FFF6FA',
+			},
+			// utilities
+			alert:{
+				success: '#edf5ee',
+				error: ''
 			}
 		},
 		fontSize: {
