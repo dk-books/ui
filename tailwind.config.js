@@ -89,65 +89,38 @@ module.exports = {
 			},
 			colors: {
 				efe:{
-					grayscale:{
-						'300': "#F3F3F3",
-					},
-					red:{
-						'300': "#E63338"
-					}
+					gray: '#2a322a',
 				},
 				dkl:{
 					blue: '#0085c8'
 				},
-				black: {
-					'300': '#000',
-					'500': '#2a322a',
-				},
-				'book-red': '#e63338',
-				'book-orange': '#ef7f16',
-				'book-bright-orange': '#F4C233',
-				'book-green': '#A2C516',
-				'book-pale-green': '#33B3A0',
-				'book-blue': '#00A1D7',
-				'book-dark-blue': '#214d90',
-				'book-purple': '#6B46A5',						// TODO: convert to bg-purple-700
-				'book-pale-purple': '#896BB7',					// TODO: convert to bg-purple-600
-				'book-gray': '#808080',
-				'book-black': '#000',
-				'red3': '#E63338',
-				'neutrals-3': '#666666',
-				gray: {
-					'50': '#fbfbfb',
-					'100': '#f3f3f3',
-					'200': '#e0e0e0',
-					'300': '#666666',
-					'350': '#C4C2C4',
-					'400': '#b7b7b7',
-					'410': '#999999',
-					'500': '#686867',
-					'550': '#dddddd',
-					'600': '#333333',
-					'700': '#474747',
-					'800': '#4a4a4a',
-				},
+				// 'book-red': '#e63338',
+				// 'book-orange': '#ef7f16',
+				// 'book-bright-orange': '#F4C233',
+				// 'book-green': '#A2C516',
+				// 'book-pale-green': '#33B3A0',
+				// 'book-blue': '#00A1D7',
+				// 'book-dark-blue': '#214d90',
+				// 'book-purple': '#6B46A5',
+				// 'book-pale-purple': '#896BB7',
+				// 'book-gray': '#808080',
+				// 'red3': '#E63338',
+				// 'neutrals-3': '#666666',
 			},
 			borderColor: {
-				'book-red': '#e63338',
-				'book-orange': '#ef7f16',
-				'book-bright-orange': '#F4C233',
-				'book-green': '#A2C516',
-				'book-pale-green': '#33B3A0',
-				'book-blue': '#00A1D7',
-				'book-dark-blue': '#214d90',
-				'book-purple': '#6B46A5',						// TODO: convert to bg-purple-700
-				'book-pale-purple': '#896BB7',					// TODO: convert to bg-purple-600
-				'orange-light': '#FFC100',
-				'gray-ccc': '#CCCCCC',
-				'blue3': '#00A1D7',
-				'black': '#000',
-				'red3': '#E63338',
-			}
-
+				grayscale:{
+					'900': '#000000',
+					'700': '#666666',
+					'500': '#CCCCCC',
+					'400': '#EBEBEB',
+				},
+				blue:{
+					'700': '#00A1D7',
+				},
+				red:{
+					'700': '#E63338',
+				},
+			},
 		},
 		fontFamily: {
 			title: ['Avenir Next'],
@@ -346,17 +319,6 @@ module.exports = {
 			'50': '50px',
 			'60': '60px',
 			'70': '70px',
-		},
-		borderColor: {
-			grayscale:{
-				'dark': '#666666',
-				'light': '#EBEBEB',
-			},
-			'gray-dark': '#EBEBEB',
-			'gray-light': '#666666',
-			'red-light': '#E63338',
-			'orange-light': '#FFC100',
-			'red3': '#E63338',
 		},
 		backgroundSize: {
 			'30': '1.275rem'

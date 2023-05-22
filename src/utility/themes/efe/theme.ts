@@ -4,8 +4,8 @@ export const efeBtn: (Record<string, string>) = {
 	green: 'bg-green-700 hover:bg-green-900',
 	red: 'bg-red-700 hover:bg-red-900',
 	orange: 'bg-orange-700 hover:bg-orange-900',
-	black: 'bg-black-300 hover:bg-black-500',
-	gray: 'bg-gray-300 hover:bg-black-500',
+	black: 'bg-grayscale-900 hover:bg-efe-gray',
+	gray: 'bg-grayscale-700 hover:bg-efe-gray',
 	navy: 'bg-blue-700 hover:bg-dark-blue-700',
 	teal: 'bg-turquoise-700 hover:bg-turquoise-900',
 	turquoise: 'bg-turquoise-700 hover:bg-turquoise-900',
@@ -14,7 +14,7 @@ export const efeBtn: (Record<string, string>) = {
 
 export const fontColor: (Record<string, string>) = {
 	white: 'text-grayscale-100 inline-flex items-center',
-	gray: 'text-gray-450 inline-flex items-center',
-	black: 'text-black inline-flex items-center',
-	default: 'text-black inline-flex items-center',
+	gray: 'text-grayscale-400 inline-flex items-center',
+	black: 'text-grayscale-900 inline-flex items-center',
+	default: 'text-grayscale-900 inline-flex items-center',
 };

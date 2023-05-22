@@ -8,7 +8,7 @@ type LanguageSelectProps = {
 };
 
 const LanguageSelect: FC<LanguageSelectProps> = ({languages, onSelected}) => (
-	<div className={`border border-gray-200 bg-zinc-50
+	<div className={`border border-grayscale-400 bg-zinc-50
       shadow-inner rounded-lg p-3 md:py-5 md:px-6`}>
 
 		<div className='flex flex-wrap -m-1'>

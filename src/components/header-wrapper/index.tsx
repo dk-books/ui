@@ -56,7 +56,7 @@ const HeaderWrapper: FC<HeaderWrapperProps> = ({
 				onMouseDown={() => {
 					setMobileNavOpen(!mobileNavOpen);
 				}}
-				className='p-[10px] w-[40px] h-[40px] border-2 border-gray-ccc border-solid rounded-lg relative top-[16px] right-[10px] lg:hidden focus:outline-none mobile-click-clear'>
+				className='p-[10px] w-[40px] h-[40px] border-2 border-grayscale-500 border-solid rounded-lg relative top-[16px] right-[10px] lg:hidden focus:outline-none mobile-click-clear'>
 				<FiMenu />
 			</button>
 		</header>

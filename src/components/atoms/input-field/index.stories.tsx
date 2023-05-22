@@ -44,7 +44,7 @@ export const InputWithDotBorder = Template.bind({});
 InputWithDotBorder.args = {
 	input: {name: 'inputDot'},
 	placeholder: 'Type something here',
-	classname: 'border-dashed border-2 border-black',
+	classname: 'border-dashed border-2 border-grayscale-900',
 };
 
 InputWithDotBorder.parameters = {

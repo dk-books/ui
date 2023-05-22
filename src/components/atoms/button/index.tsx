@@ -106,7 +106,7 @@ const Button: React.FC<ButtonProps> = ({
 	const pathOnly = (path: string | undefined, externalLink?: boolean) => {
 		if (path) {
 			return (<div className='flex'>
-				<a href={path} rel='noreferrer' target={externalLink ? '_blank' : ''} className={'block pl-5 py-2 pr-12 whitespace-nowrap text-14 grayscale-700 any-hover:hover:text-black any-hover:hover:underline cursor-pointer'}>
+				<a href={path} rel='noreferrer' target={externalLink ? '_blank' : ''} className={'block pl-5 py-2 pr-12 whitespace-nowrap text-14 grayscale-700 any-hover:hover:text-grayscale-900 any-hover:hover:underline cursor-pointer'}>
 					{children}
 				</a>
 			</div>);
@@ -131,7 +131,7 @@ const Button: React.FC<ButtonProps> = ({
 			<button
 				onClick={onClick}
 				className={`flex flex-grow h-full items-center px-4.5 grayscale-700
-      any-hover:hover:text-black font-medium`}>
+      any-hover:hover:text-grayscale-900 font-medium`}>
 				{iconDisplay}
 				{children}
 				<img
