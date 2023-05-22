@@ -132,24 +132,6 @@ module.exports = {
 					'700': '#474747',
 					'800': '#4a4a4a',
 				},
-				red: {
-					'50': '#ffedee',
-					'100': '#fceaeb',
-					'200': '#ffd2d4',
-					'300': '#E63338',
-					'400': '#e02020',
-					'500': '#ff777d',
-					'550': '#932124',
-					'600': '#991016',
-					'700': '#6b0000',
-					'800': '#ffbad3',
-					'900': '#ffa4a8',
-				},
-				teal: {
-					'300': '#00A088',
-					'500': '#00a088',
-					'600': '#006051'
-				},
 			},
 			borderColor: {
 				'book-red': '#e63338',
@@ -193,6 +175,17 @@ module.exports = {
 		},
 		colors: {
 			// default color palettes
+			red:{
+				'900': '#932124',
+				'800': '#B8292D',
+				'700': '#E63338',
+				'600': '#EB5C60',
+				'500': '#F08588',
+				'400': '#F5ADAF',
+				'300': '#FAD6D7',
+				'200': '#F9E7E8',
+				'100': '#FAF1F1',
+			},
 			grayscale:{
 				'900': '#000000',
 				'800': '#333333',
@@ -303,10 +296,16 @@ module.exports = {
 				'200': '#FFEEF4',
 				'100': '#FFF6FA',
 			},
-			// utilities
+			// specific components
 			alert:{
-				success: '#edf5ee',
-				error: ''
+				success: {
+					bg: '#edf5ee',
+					text: '#0c5c14'
+				},
+				error: {
+					bg: '#ffedee',
+					text: '#F5ADAF'
+				},
 			}
 		},
 		fontSize: {

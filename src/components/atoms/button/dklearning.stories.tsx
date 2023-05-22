@@ -26,7 +26,7 @@ export const ExampleButton = Template.bind({});
 ExampleButton.args = {
 	repo: 'dklearning',
 	children: 'Save',
-	colour: 'buttonDark',
+	colour: 'default',
 	type: 'submit',
 };
 
