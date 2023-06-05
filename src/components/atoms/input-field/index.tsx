@@ -19,7 +19,7 @@ export type InputFieldProps = {
 
 export const InputField: React.FC<InputFieldProps> = ({children, register, placeholder, classname, input, error, ...props}: InputFieldProps) => {
 	const border = classname ? classname : 'border-grayscale-500';
-	const errorColor = error ? 'border-red-700 invalid:border-red-700 invalid:text-red3 focus:invalid:border-red-700' : border;
+	const errorColor = error ? 'border-red-700 invalid:border-red-700 invalid:text-red-700 focus:invalid:border-red-700' : border;
 
 	return (
 		<div>

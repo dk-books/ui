@@ -18,7 +18,7 @@ const Badge: FC<BadgeProps> = ({children, colour = 'default', onClick}) => (
 			onClick={onClick}
 			className={`w-[182px] h-[182px]  ${
 				efeBtn[colour] || efeBtn.default
-			} border-10 border-[#fff] rounded-[50%] flex justify-center items-center`}
+			} border-10 border-grayscale-100 rounded-[50%] flex justify-center items-center`}
 		>
 			{children}
 		</button>

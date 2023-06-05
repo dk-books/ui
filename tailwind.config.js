@@ -94,32 +94,6 @@ module.exports = {
 				dkl:{
 					blue: '#0085c8'
 				},
-				// 'book-red': '#e63338',
-				// 'book-orange': '#ef7f16',
-				// 'book-bright-orange': '#F4C233',
-				// 'book-green': '#A2C516',
-				// 'book-pale-green': '#33B3A0',
-				// 'book-blue': '#00A1D7',
-				// 'book-dark-blue': '#214d90',
-				// 'book-purple': '#6B46A5',
-				// 'book-pale-purple': '#896BB7',
-				// 'book-gray': '#808080',
-				// 'red3': '#E63338',
-				// 'neutrals-3': '#666666',
-			},
-			borderColor: {
-				grayscale:{
-					'900': '#000000',
-					'700': '#666666',
-					'500': '#CCCCCC',
-					'400': '#EBEBEB',
-				},
-				blue:{
-					'700': '#00A1D7',
-				},
-				red:{
-					'700': '#E63338',
-				},
 			},
 		},
 		fontFamily: {
