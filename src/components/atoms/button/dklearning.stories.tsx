@@ -22,15 +22,15 @@ const Template: ComponentStory<typeof Button> = args => (
 	</div>
 );
 
-export const ExampleButton = Template.bind({});
-ExampleButton.args = {
+export const Default = Template.bind({});
+Default.args = {
 	repo: 'dklearning',
-	children: 'Save',
+	children: 'DKL Button',
 	colour: 'default',
 	type: 'submit',
 };
 
-ExampleButton.story = {
+Default.story = {
 	parameters: {
 		nextRouter: {
 			path: '/',
