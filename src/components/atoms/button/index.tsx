@@ -63,7 +63,7 @@ const Button: React.FC<ButtonProps> = ({
 	// Repo Button Type
 	const buttonRepo = (repo: string, type: string, colour: string) => {
 		switch (repo) {
-			case 'dklearning':
+			case 'dkl':
 				return `${dklBtn[type]} ${dklBtn[colour]} `;
 			case 'efe':
 				return `${efeBtn[type]} ${efeBtn[colour]}`;
