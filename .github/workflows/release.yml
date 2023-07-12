@@ -32,7 +32,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GPR_ACCESS_TOKEN_APRIL_2023 }}
       - name: Deploy to GitHub Pages
-        uses: dk-books/ui/github-pages-deploy-action@v1
+        uses: actions/deploy-pages@v1
         with:
           target_branch: gh-pages
           build_dir: build
