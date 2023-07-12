@@ -12,15 +12,10 @@ jobs:
     permissions:
       contents: read
       packages: write
-      pages: write
-      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Configure Github Package Registry
-        run: |
-          npm config set @dk-books:registry https://npm.pkg.github.com
-          echo "//npm.pkg.github.com/:_authToken=${{secrets.GPR_ACCESS_TOKEN_APRIL_2023}}" > ~/.npmrc
+
       - name: Setup Node.js with GitHub Package Registry
         uses: actions/setup-node@v3
         with:
@@ -36,13 +31,18 @@ jobs:
         run: npm run release -- --gh-pages
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GPR_ACCESS_TOKEN_APRIL_2023 }}
+  deploy:
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    needs: publish
+    steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v1
-        with:
-          provider: 'github'
-          token: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
-          repository: ''             # Default is current repository
-          branch: 'gh-pages'         # Default is gh-pages for github provider
-          jekyll_src: './'           # Default is root directory
-          jekyll_cfg: '_config.yml'  # Default is _config.yml
-          jekyll_baseurl: '/jekyll-theme-yat'  # Default is empty
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GPR_ACCESS_TOKEN_APRIL_2023 }}
