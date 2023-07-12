@@ -38,7 +38,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GPR_ACCESS_TOKEN_APRIL_2023 }}
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
-        runs-on: ubuntu-latest
         with:
           target_branch: gh-pages
           build_dir: build        
