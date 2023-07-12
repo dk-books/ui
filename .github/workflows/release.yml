@@ -15,7 +15,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
+      - name: Configure Github Package Registry
+        run: |
+          npm config set @dk-books:registry https://npm.pkg.github.com
+          echo "//npm.pkg.github.com/:_authToken=${{secrets.GPR_ACCESS_TOKEN_APRIL_2023}}" > ~/.npmrc
       - name: Setup Node.js with GitHub Package Registry
         uses: actions/setup-node@v3
         with:
@@ -33,9 +36,11 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GPR_ACCESS_TOKEN_APRIL_2023 }}
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
+        permissions:
+          contents: read
+          pages: write
+          id-token: write
+        runs-on: ubuntu-latest
         with:
           target_branch: gh-pages
-          build_dir: build
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GPR_ACCESS_TOKEN_APRIL_2023 }}
-        
+          build_dir: build        
