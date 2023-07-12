@@ -34,11 +34,10 @@
         - name: Build UI
           run: npm run build --if-present
 
-        - uses: actions/upload-artifact@v3
-          if: ${{ failure() && steps.diff.conclusion == 'failure' }}
+        - uses: actions/download-artifact@master
           with:
-            name: index.js
-            path: dist/index.js
+            name: page
+            path: .
 
       deploy:
         environment:
