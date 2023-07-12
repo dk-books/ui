@@ -37,5 +37,5 @@ jobs:
           target_branch: gh-pages
           build_dir: build
         env:
-          GITHUB_TOKEN: ${{ secrets.GPR_ACCESS_TOKEN_APRIL_2023 }}
+          NODE_AUTH_TOKEN: ${{ secrets.GPR_ACCESS_TOKEN_APRIL_2023 }}
         
