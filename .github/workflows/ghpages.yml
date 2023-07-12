@@ -26,7 +26,7 @@ on:
         run: npm ci
 
       # Not using npm? Change `npm run build` to `yarn build` or `pnpm run build`
-      - name: Build Astro
+      - name: Build UI
         run: npm run build --if-present
 
       - name: Upload artifact
