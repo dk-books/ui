@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import type {FC, ReactNode} from 'react';
 import {FiMenu} from 'react-icons/fi';
 
@@ -21,7 +21,7 @@ const HeaderWrapper: FC<HeaderWrapperProps> = ({
 	onMouseEnter,
 	onPointerEnter,
 }) => {
-	const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
+	const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
 
 	useEffect(() => {
 		if (!mobileNavEnabled) {
