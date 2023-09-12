@@ -1,0 +1,136 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+} from "@storybook/addon-docs";
+
+import imgSpacing2 from "./images/CL-spacing-2-8px.png";
+import imgSpacing4 from "./images/CL-spacing-4-16px.png";
+import imgSpacing6 from "./images/CL-spacing-6-24px.png";
+import imgSpacing8 from "./images/CL-spacing-8-32px.png";
+import imgSpacing12 from "./images/CL-spacing-12-48px.png";
+import imgSpacing16 from "./images/CL-spacing-16-64px.png";
+import imgSpacingNaming from "./images/CL-spacing-naming.png";
+import imgSpacingButton from "./images/CL-spacing-button.png";
+import buttonOne from "./images/button1.png";
+import buttonTwo from "./images/button2.png";
+
+<Meta title="DK/Foundation/Typography/Spacing" />
+
+# Spacing
+
+Designing within a defined spacing system allows us to work faster and with greater consistency.
+
+Consistent and scaleable spacing also allows us to establish a logical heirarchy across our digital estate.
+
+## Base Unit
+
+Our spacing and grid are based on an 8px base unit.
+
+A 4px half unit is available for fine tuning of small elements and very small text, but should only be used where 8px wouldn't be appropriate.
+
+## Spacing Sizes
+
+The following spacing components can be found in the asset library published with this design system.
+
+Narrow and wide variants are also present to allow cleaner vertical or horizontal stacking.
+
+<img
+  alt="six squares on a line with a text displaying the sizes of each space for 8px 16px 24px 32px 48px and 64px"
+  src={imgSpacingNaming}
+  title="Spacing sizes illustrated"
+/>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Pixels</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>0.5rem</td>
+      <td>8px</td>
+      <td>
+        <img alt="8px rectangle" src={imgSpacing2} title="8px rectangle" width />
+      </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>1rem</td>
+      <td>16px</td>
+      <td>
+        <img alt="16px rectangle" src={imgSpacing4} title="16px rectangle" />
+      </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>1.5rem</td>
+      <td>24px</td>
+      <td>
+        <img alt="24px rectangle" src={imgSpacing6} title="24px rectangle" />
+      </td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>2rem</td>
+      <td>32px</td>
+      <td>
+        <img alt="32px rectangle" src={imgSpacing8} title="32px rectangle" />
+      </td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>3rem</td>
+      <td>48px</td>
+      <td>
+        <img alt="48px rectangle" src={imgSpacing12} title="48px rectangle" />
+      </td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>4rem</td>
+      <td>64px</td>
+      <td>
+        <img alt="64px rectangle" src={imgSpacing16} title="64px rectangle" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Element first (strict sizing element)
+
+Width (170px)
+Height: (47px)
+Left: 68px
+Radius: 8px
+Padding: 12px, 24px, 12px, 24px
+Gap: 8px
+
+<img
+  width="170"
+  height="47"
+  alt="internal button border 20 height and 10 padding. external button border 36 height"
+  src={buttonOne}
+  title="Spacing on buttons"
+/>
+
+## Spacing Sizes
+
+The following spacing components can be found in the asset library published with this design system.
+
+Narrow and wide variants are also present to allow cleaner vertical or horizontal stacking.
+
+Icon image: Width: 9.25px, Height: 16px, Top: 2.85px
+
+<img
+  width="170"
+  height="47"
+  alt="internal button border 20 height and 10 padding. external button border 36 height"
+  src={buttonTwo}
+  title="Spacing on buttons"
+/>
