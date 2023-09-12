@@ -15,7 +15,7 @@ CtaText.args = {
 		colour: 'orange',
 		icon: 'download',
 	},
-	taType: '',
+	ctaType: '',
 	text: 'Teach yourself English from beginner to advanced with a range of course and practice books. Includes general English, business English and a grammar guide.',
 	href: '/en/audio',
 	title: 'High-quality audio',
