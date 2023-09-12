@@ -21,16 +21,11 @@ jobs:
       - name: Setup Node.js with GitHub Package Registry
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
           registry-url: "https://npm.pkg.github.com"
           scope: "@dk-books"
       - name: Install modules
         run: npm ci
       - name: Build
         run: npm run build
-
-      - name: Publish
-        run: npm run release -- --gh-pages
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GPR_ACCESS_TOKEN_APRIL_2023 }}
 
