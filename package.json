@@ -2,7 +2,7 @@
   "name": "@dk-books/ui",
   "private": true,
   "homepage": "https://dk-books.github.io/ui/",
-  "version": "0.4.32",
+  "version": "0.4.33",
   "type": "module",
   "repository": {
     "type": "git",
