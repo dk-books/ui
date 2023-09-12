@@ -17,5 +17,6 @@ export const GetLocale = () => {
 	if (mounted) {
 		country = getRouter.query.country as string;
 	}
+	
 	return country;
-}
+};

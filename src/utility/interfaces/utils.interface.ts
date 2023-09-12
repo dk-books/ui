@@ -44,11 +44,11 @@ interface CTACardInterface {
 }
 
 export interface ButtonCardInterface {
-  /** button title */
+  /** Button title */
   title: string;
   /** Button link */
   link: string;
-  /** what colour is this button */
+  /** What colour is this button */
   colour: string;
   /** If the button is for an external link, an icon will be dispalayed */
   isExternalLink: boolean;

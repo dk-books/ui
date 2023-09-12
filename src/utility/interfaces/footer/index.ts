@@ -1,4 +1,4 @@
-import type {ImageInterface,	NewImageInterface} from '../';
+import type {ImageInterface, NewImageInterface} from '../';
 
 export interface FooterInterface {
 	type?: any;
@@ -21,17 +21,17 @@ export interface RawInterface {
 }
 
 export interface NavItemInterface {
-	/** what is the name of this nav item */
+	/** What is the name of this nav item */
 	name?: string;
-	/** what is the src of this link? */
+	/** What is the src of this link? */
 	link?: string;
-	/** what is the id of this element? */
+	/** What is the id of this element? */
 	id?: string;
-	/** what is the title of this nav item */
+	/** What is the title of this nav item */
 	title?: string;
-	/** what is the src of this path? */
+	/** What is the src of this path? */
 	path?: string;
-	/** does this nav item have any children? */
+	/** Does this nav item have any children? */
 	children?: any[];
 	dropdownHeading?: any;
 }

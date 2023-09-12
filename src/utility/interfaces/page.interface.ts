@@ -7,7 +7,7 @@ export interface PagePropsInterface {
 
 enum Taxonomy {
   Levels = 'levels',
-  Subjects = 'subjects',
+  Subjects = 'subjects'
 }
 
 type NamedTaxonomy = {

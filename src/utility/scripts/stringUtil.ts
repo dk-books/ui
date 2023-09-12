@@ -6,5 +6,6 @@ export function stringLimit(
 	if (fullText.length <= limit) {
 		return fullText;
 	}
+	
 	return `${fullText.slice(0, limit - cutOff.length)}${cutOff}`;
 }

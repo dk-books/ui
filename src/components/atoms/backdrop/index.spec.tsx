@@ -12,6 +12,6 @@ describe('Backdrop', () => {
 		const {baseElement} = render(<Backdrop><div>Test</div></Backdrop>);
 
 		expect(baseElement).toBeTruthy();
-	}
+	},
 	);
 });

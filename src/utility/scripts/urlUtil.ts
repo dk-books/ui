@@ -6,6 +6,7 @@ export function slashPath(raw: string): string {
 	if (!raw) {
 		return '/';
 	}
+
 	const stripped = raw
 		.trim()
 		.replace(/^\/+|\/+$/g, '')
@@ -15,7 +16,7 @@ export function slashPath(raw: string): string {
 	return `/${stripped}`;
 }
 
-// export function stripEmptyValues<
+// Export function stripEmptyValues<
 // 	T extends
 // 	| {
 // 		[key: string]: any;

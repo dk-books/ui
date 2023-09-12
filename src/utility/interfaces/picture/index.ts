@@ -11,18 +11,18 @@ export interface CMSImageInterface {
 export interface ImageInterface extends CMSImageInterface {
   /** What field is this for? */
   field?: string;
-  /** alt text */
+  /** Alt text */
   alt?: string;
-  /** image source */
+  /** Image source */
   source?: ImageSource;
 }
 
 export interface NewImageInterface extends CMSImageInterface {}
 
 export interface ImageSource {
-  /** name of the image file */
+  /** Name of the image file */
   filename: string;
-  /** bucket location where the image file sits */
+  /** Bucket location where the image file sits */
   location: string;
 }
 
@@ -33,7 +33,7 @@ export interface PicturePropsInterface {
   dimensions: DimensionsMediaInterface;
   /** lazy load this image? */
   lazyLoad?: boolean;
-  /** tailwind classes to add to the image (as one string) */
+  /** Tailwind classes to add to the image (as one string) */
   classes?: string;
 }
 
@@ -46,9 +46,9 @@ export interface DimensionsMediaInterface {
 }
 
 export interface DimensionInterface {
-  /** image height */
+  /** Image height */
   h?: number;
-  /** image width */
+  /** Image width */
   w?: number;
 }
 
