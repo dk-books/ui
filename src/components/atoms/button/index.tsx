@@ -10,7 +10,6 @@ type ButtonProps = {
 	href?: string;
 	children: ReactNode;
 	icon?: string;
-	wide?: boolean;
 	externalLink?: boolean;
 	width?: string;
 	newTab?: string;
