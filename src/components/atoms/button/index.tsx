@@ -115,7 +115,7 @@ const Button: React.FC<ButtonProps> = ({
 
 	const buttonWidth = buttonwidth(layout);
 
-	let buttonClass = null;
+	let buttonClass: string | undefined;
 	if (colour) {
 		const pickFontColor = fontColorText ? fontColorText : 'white';
 		buttonClass = `${fontColor[pickFontColor]} ${buttonWidth}`;
