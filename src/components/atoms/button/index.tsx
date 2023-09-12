@@ -1,5 +1,5 @@
 import React from 'react';
-import type {FC, ReactNode} from 'react';
+import type {ReactNode} from 'react';
 import {Icons} from '../icons';
 import {dklBtn} from '../../../utility/themes/dkl/theme';
 import {efeBtn, fontColor} from '../../../utility/themes/efe/theme';
@@ -36,7 +36,6 @@ const Button: React.FC<ButtonProps> = ({
 	children,
 	colour = 'default',
 	icon,
-	wide = false,
 	externalLink = false,
 	text,
 	newTab,

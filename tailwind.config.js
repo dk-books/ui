@@ -14,7 +14,8 @@ module.exports = {
 			},
 			padding: {
 				'1/3': '33.33333%',
-				'2/3': '66.66667%'
+				'2/3': '66.66667%',
+				'17.75': '4.4375rem', // 71px
 			},
 			margin: {
 				'1/3': '33.33333%',
@@ -67,9 +68,6 @@ module.exports = {
 				'42': '42px',
 				'44': '44px',
 				'49': '49px'
-			},
-			padding: {
-				'17.75': '4.4375rem', // 71px
 			},
 			inset: {
 				'6.25': '1.563rem', //25px
@@ -295,9 +293,7 @@ module.exports = {
 			'70': '70px',
 		},
 		backgroundSize: {
-			'30': '1.275rem'
-		},
-		backgroundSize: {
+			'30': '1.275rem',
       'auto': 'auto',
       'cover': 'cover',
       'contain': 'contain',

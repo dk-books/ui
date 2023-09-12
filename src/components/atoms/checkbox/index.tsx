@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import type {UseFormRegisterReturn} from 'react-hook-form';
 
 export type CheckBoxErrorProps = {
@@ -21,7 +21,7 @@ export type CheckBoxProps = {
 	error?: string;
 };
 
-export const Checkbox: React.FC<CheckBoxProps> = ({customId, register, defaultChecked, onChange, children, placeholder, inputRef, checkBoxClassName, labelClassName, dotted, input, error, ...props}: CheckBoxProps) => {
+export const Checkbox: React.FC<CheckBoxProps> = ({customId, register, defaultChecked, children, placeholder, checkBoxClassName, dotted, input, error}: CheckBoxProps) => {
 	const dottedDisplay = dotted ? 'pl-2 pt-2 border-dashed border-2' : '';
 	const errorColor = error ? 'text-red-700' : 'text-grayscale-700';
 

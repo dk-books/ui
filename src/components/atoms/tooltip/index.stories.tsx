@@ -1,6 +1,5 @@
 import React from 'react';
 import type {ComponentStory, ComponentMeta} from '@storybook/react';
-import {FaBeer} from 'react-icons/fa';
 
 import {ToolTip} from '.';
 

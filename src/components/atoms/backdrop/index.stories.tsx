@@ -1,5 +1,5 @@
 import React from 'react';
-import type {ComponentStory, ComponentMeta} from '@storybook/react';
+import type {ComponentMeta} from '@storybook/react';
 import {Backdrop} from '.';
 
 const StoryType: ComponentMeta<typeof Backdrop> = {
@@ -8,17 +8,17 @@ const StoryType: ComponentMeta<typeof Backdrop> = {
 };
 export default StoryType;
 
-const Template: ComponentStory<typeof Backdrop> = args => (
+const Template = args => (
 	<Backdrop {...args}>{args.children}</Backdrop>
 );
 
-export const componentData = Template.bind({});
+export const ComponentData = Template.bind({});
 
-componentData.args = {
+ComponentData.args = {
 	children: <div>Copy component to new component</div>,
 };
 
-componentData.parameters = {
+ComponentData.parameters = {
 	design: {
 		type: 'figma',
 		url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843',

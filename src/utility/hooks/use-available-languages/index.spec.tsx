@@ -1,11 +1,5 @@
 import '@testing-library/jest-dom';
-import React from "react";
-import {renderHook} from '@testing-library/react-hooks';
-import useAvailableLanguages from '.';
-
-import {GraphQLHandler} from 'graphql-mocks';
-import {nockHandler} from '@graphql-mocks/network-nock';
-import nock from 'nock';
+// import {GraphQLHandler} from 'graphql-mocks';
 
 describe('useAvailableLanguages', () => {
 	/*
@@ -18,8 +12,6 @@ describe('useAvailableLanguages', () => {
 
 		but I can't figure out how to get it running without any schema.
 	*/
-
-	let graphQLHandler: GraphQLHandler;
 
 	beforeEach(() => {
 
