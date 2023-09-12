@@ -1,12 +1,5 @@
 import React from 'react';
-import {plainTextClasses} from './index.style';
-
-enum PlainTextSize {
-	SmallPrint = 'smallPrint',
-	Default = 'default',
-	Large = 'large',
-	XL = 'xl',
-}
+import {plainTextClasses, PlainTextSize} from './index.style';
 
 export type PlainTextProps = {
 	size?: PlainTextSize;

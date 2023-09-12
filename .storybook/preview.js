@@ -7,4 +7,9 @@ export const parameters = {
       date: /Date$/,
     },
   },
+	options: {
+    storySort: {
+      order: ['Getting Started', 'DK', 'Components', 'Layouts', 'Pages'],
+    },
+  },
 }

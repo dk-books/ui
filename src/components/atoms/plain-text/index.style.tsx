@@ -1,7 +1,12 @@
 import type {PlainTextProps} from './index';
-import {PlainTextSize} from './index';
-
 import classNames from 'classnames';
+
+export enum PlainTextSize {
+	SmallPrint = 'smallPrint',
+	Default = 'default',
+	Large = 'large',
+	XL = 'xl',
+}
 
 export const plainTextClasses = ({size, bold}: PlainTextProps): string => {
 	switch (size! as PlainTextSize | undefined) {
