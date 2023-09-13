@@ -18,7 +18,7 @@ Hero.args = {
 	icon: 'computer',
 };
 
-Hero.parsameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}};
+Hero.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}};
 
 export const Exteral = Template.bind({});
 Exteral.args = {

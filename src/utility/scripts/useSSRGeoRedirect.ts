@@ -10,7 +10,8 @@ export interface RedirectPropsInterface {
 
 export const useSSRGeoRedirect = (context: GetServerSidePropsContext, country: any) => {
 	const market = context.params?.country || '';
-	const langCode = context.req.headers['accept-language']?.split(',')?.[0] || 'en-US';
+	const langCode =
+		context.req.headers['accept-language']?.split(',')?.[0] || 'en-US';
 	const defaultMarket = 'en';
 
 	const codes = country.map((item: {market: string}) => {

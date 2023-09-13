@@ -1,15 +1,15 @@
 import React from 'react';
 import type {ComponentStory, ComponentMeta} from '@storybook/react';
-import {Backdrop} from '.';
+import {CopyComponent} from '.';
 
-const StoryType: ComponentMeta<typeof Backdrop> = {
-	title: 'DK/Form/Backdrop',
-	component: Backdrop,
+const StoryType: ComponentMeta<typeof CopyComponent> = {
+	title: 'DK/Form/CopyComponent',
+	component: CopyComponent,
 };
 export default StoryType;
 
-const Template: ComponentStory<typeof Backdrop> = args => (
-	<Backdrop {...args}>{args.children}</Backdrop>
+const Template: ComponentStory<typeof CopyComponent> = args => (
+	<CopyComponent {...args}>{args.children}</CopyComponent>
 );
 
 export const ComponentData = Template.bind({});

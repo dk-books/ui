@@ -28,12 +28,11 @@ const SlimCallToAction: FC<SlimCallToActionProps> = ({
 
 	if (imageUrl && href) {
 		ctas.push(
-			<div>
-				<link href={href}>
-					<div className='relative w-full h-[91px]' key={href}>
-						<img src={imageUrl} alt={'image'} layout='fill' objectFit='contain' />
-					</div>
-				</link>
+			<div><a href={href}>
+				<div className='relative w-full h-[91px]' key={href}>
+					<img src={imageUrl} alt={'image'} />
+				</div>
+			</a>
 			</div>,
 		);
 	}
@@ -42,7 +41,6 @@ const SlimCallToAction: FC<SlimCallToActionProps> = ({
 		ctas.push(
 			<Button
 				repo={repo}
-				wide={true}
 				colour={button.colour}
 				href={href}
 				icon={button.icon}

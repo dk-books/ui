@@ -18,21 +18,21 @@ export type InputFieldProps = {
 };
 
 export const InputField: React.FC<InputFieldProps> = ({children, register, placeholder, classname, input, error, ...props}: InputFieldProps) => {
-	const border = classname ? classname : 'border-grayscale-500';
-	const errorColor = error ? 'border-red-700 invalid:border-red-700 invalid:text-red-700 focus:invalid:border-red-700' : border;
+	const border = classname ? classname : 'border-gray-ccc';
+	const errorColor = error ? 'border-red3 invalid:border-red3 invalid:text-red3 focus:invalid:border-red3' : border;
 
 	return (
 		<div>
 			{children && <label {...props} className='mr-3'>{children}</label>}
 			<div>
 				<input {...input}
-					className={`w-283 sm:w-275 h-49 rounded-lg p-3 bg-grayscale-100 border-2 justify-center focus:bg-grayscale-500 focus:text-grayscale-900 
-					focus:border-blue-700 ${errorColor}`}
+					className={`w-283 sm:w-275 h-49 rounded-lg p-3 bg-white border-2 justify-center focus:bg-gray-ccc focus:text-black 
+					focus:border-blue3 ${errorColor}`}
 					placeholder={placeholder}
 					{...register}
 				/>
 			</div>
-			{error && <div className={'mt-2 ml-4 text-14 font-medium text-grayscale-900 text-12 text-red-500'}>{error}</div>}
+			{error && <div className={'mt-2 ml-4 text-14 font-medium text-book-black text-12 text-red-500'}>{error}</div>}
 		</div>
 	);
 };

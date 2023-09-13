@@ -1,6 +1,6 @@
-import {renderHook} from '@testing-library/react-hooks';
-import {act} from '@testing-library/react';
-import {useSavedLanguage} from '.';
+import {renderHook} from "@testing-library/react-hooks";
+import {act} from "@testing-library/react";
+import {useSavedLanguage} from ".";
 
 describe('useSavedLanguage', () => {
 

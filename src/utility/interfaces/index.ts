@@ -1,15 +1,15 @@
 import type {
 	NewImageInterface,
-	CMSImageInterface,
+	CMSImageInterface
 } from './picture';
 import {
 	FooterInterface,
-	NavItemInterface,
+	NavItemInterface
 } from './footer';
 export * from './picture';
 export * from './footer';
 export * from './button';
-import {CMSBlockType} from "./content-blocks";
+import { CMSBlockType } from "./content-blocks";
 
 type BodyInterface = any;
 
@@ -20,23 +20,23 @@ type CategorisedBlocks = {
 };
 
 interface HeaderInterface {
-	/** What is this data for? */
+	/** what is this data for? */
 	type?: any;
-	/** The main image in the header */
+	/** the main image in the header */
 	image?: ImageInterface;
 	logo?: NewImageInterface;
 	/** the content for the sign-in */
 	signInText?: string;
-	/** The content for the login */
+	/** the content for the login */
 	loginText?: string;
 	/** Country settings button */
 	countryText?: string;
 	countrySettings?: ImageButtonInterface;
 	countryFlag?: NewImageInterface;
-	/** The items in the navigation */
+	/** the items in the navigation */
 	navItems?: NavItemInterface[];
 	menu?: NewMenuItemInterface | any;
-	/** The items for search-bar */
+	/** the items for search-bar */
 	searchPlaceholder?: string;
 	recentlySearched?: string;
 	deleteText?: string;
@@ -49,7 +49,7 @@ interface HeaderInterface {
 }
 
 export interface ImageButtonInterface {
-	/** Button label */
+	/** button label */
 	label?: string;
 	image?: ImageInterface;
 }
@@ -57,13 +57,13 @@ export interface ImageButtonInterface {
 interface ImageInterface extends CMSImageInterface {
 	/** What field is this for? */
 	field?: string;
-	/** Alt text */
+	/** alt text */
 	alt?: string;
-	/** Image source */
+	/** image source */
 	source?: ImageSource;
-	// Url?: string;
-	// Height?: number;
-	// Width?: number;
+	// url?: string;
+	// height?: number;
+	// width?: number;
 }
 
 interface ImageSource {
@@ -152,34 +152,34 @@ export type {
 	CMSFooterBlockInterface,
 	CMSHeaderBlockInterface,
 	CategorisedBlocks,
-	BodyInterface,
+	BodyInterface
 };
 
 export interface PageLayoutInterface {
-	/** The data for the header component */
-	headerData?: HeaderInterface;
-	/** The data for the footer component */
-	footerData?: FooterInterface;
-	/** The data for the main content on this page */
-	children: JSX.Element;
-	/** are we showing a minimal header */
-	minimalHeader?: boolean;
+  /** The data for the header component */
+  headerData?: HeaderInterface;
+  /** The data for the footer component */
+  footerData?: FooterInterface;
+  /** The data for the main content on this page */
+  children: JSX.Element;
+  /** are we showing a minimal header */
+  minimalHeader?: boolean;
 }
 
 export interface PageMetaDataInterface {
-	seo?: MetaDataSEOInterface
-	image?: MetaAataImageInterface
+  seo?: MetaDataSEOInterface
+  image?: MetaAataImageInterface
 }
 
 export interface MetaAataImageInterface {
-	url: string;
+  url: string;
 }
 
 export interface MetaDataSEOInterface {
-	id: string;
-	title: string;
-	description: string;
-	keywords?: string;
+  id: string;
+  title: string;
+  description: string;
+  keywords?: string;
 }
 
 export interface CardSwitcherInterfaces {

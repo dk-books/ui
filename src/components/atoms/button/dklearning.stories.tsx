@@ -21,40 +21,19 @@ const Template: ComponentStory<typeof Button> = args => (
 	</div>
 );
 
-export const Default = Template.bind({});
-Default.args = {
-	repo: 'dkl',
-	children: 'DKL Button',
-	colour: 'default',
+export const ExampleButton = Template.bind({});
+ExampleButton.args = {
+	repo: 'dklearning',
+	children: 'Save',
+	colour: 'buttonDark',
 	type: 'submit',
 };
 
-Default.story = {
+ExampleButton.story = {
 	parameters: {
 		nextRouter: {
 			path: '/',
 			asPath: '/',
-			query: {
-			},
-		},
-	},
-};
-
-export const External = Template.bind({});
-External.args = {
-	repo: 'dkl',
-	children: 'DKL External Button',
-	colour: 'default',
-	icon: 'external',
-	externalLink: true,
-	href: '/books',
-};
-
-External.story = {
-	parameters: {
-		nextRouter: {
-			path: '/2',
-			asPath: '/1',
 			query: {
 			},
 		},

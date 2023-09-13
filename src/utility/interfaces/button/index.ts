@@ -4,5 +4,5 @@ text: string;
 }
 
 export type {
-	ButtonInterface,
-};
+	ButtonInterface
+}

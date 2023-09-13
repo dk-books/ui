@@ -7,13 +7,11 @@ type LanguageCardProps = {
 };
 
 const LanguageCard: FC<LanguageCardProps> = ({language}) => (
-	<div className='h-16'>
-		<div className={`text-base font-bold rounded border-2
-				text-grayscale-700 border-grayscale-300 h-full`}>
-			<Center>
-				{language}
-			</Center>
-		</div>
+	<div className={`text-base font-bold rounded border-2
+      text-gray-500 border-stone-300 h-full`}>
+		<Center>
+			{language}
+		</Center>
 	</div>
 );
 

@@ -26,7 +26,7 @@ const Dropdown: FC<DropdownProps> = ({
 			before:-translate-x-2/4
 			before:top-[-11px]
 			before:left-[50%]
-			box-content border rounded-xl border-grayscale-200 shadow-xl bg-grayscale-100
+			box-content border rounded-xl border-grayscale-light shadow-xl bg-grayscale-100
 			text-grayscale-900 origin-top transition delay-100
 			${open ? 'rotateX-0' : 'rotateX-90'}
 			`}>
