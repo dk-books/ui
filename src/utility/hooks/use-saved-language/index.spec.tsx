@@ -1,9 +1,8 @@
-import {renderHook} from "@testing-library/react-hooks";
-import {act} from "@testing-library/react";
-import {useSavedLanguage} from ".";
+import {renderHook} from '@testing-library/react-hooks';
+import {act} from '@testing-library/react';
+import {useSavedLanguage} from '.';
 
 describe('useSavedLanguage', () => {
-
 	const setLanguage = (value: string) => {
 		const {result: {current}} = renderHook(() => useSavedLanguage());
 		const [defaultSavedLanguage, saveLanguage] = current;
@@ -12,9 +11,8 @@ describe('useSavedLanguage', () => {
 	};
 
 	afterEach(() => {
-
 		act(() => {
-			setLanguage('')
+			setLanguage('');
 		});
 	});
 
@@ -25,7 +23,6 @@ describe('useSavedLanguage', () => {
 	});
 
 	it('can set and retrieve saved language', () => {
-
 		act(() => {
 			setLanguage('sk');
 		});

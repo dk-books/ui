@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import React from "react";
+import React from 'react';
 import {renderHook} from '@testing-library/react-hooks';
 import useAvailableLanguages from '.';
 
@@ -27,7 +27,7 @@ describe('useAvailableLanguages', () => {
 
 	it('will perform request to hygraph to get available languages', async () => {
 		/*
-		const wrapper = ({ children }) => {
+		Const wrapper = ({ children }) => {
 			return <GraphqlProvider>{children}</GraphqlProvider>;
 		};
 

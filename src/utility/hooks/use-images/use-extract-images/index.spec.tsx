@@ -1,5 +1,5 @@
 import {useExtractImages} from '.';
-import {renderHook} from "@testing-library/react-hooks";
+import {renderHook} from '@testing-library/react-hooks';
 
 describe('useExtractImages', () => {
 	it('should extraxt images', () => {
@@ -10,27 +10,27 @@ describe('useExtractImages', () => {
 						{
 							images: [
 								{
-									title: "title 1",
-									url: "url 1"
+									title: 'title 1',
+									url: 'url 1',
 								},
 								{
-									title: "title 2",
-									url: "url 2"
-								}
-							]
+									title: 'title 2',
+									url: 'url 2',
+								},
+							],
 						},
 						{},
 						{
 							images: [
 								{
-									title: "title 3",
-									url: "url 3"
-								}
-							]
-						}
-					]
-				}
-			]
+									title: 'title 3',
+									url: 'url 3',
+								},
+							],
+						},
+					],
+				},
+			],
 		};
 	});
 });

@@ -1,6 +1,6 @@
 import {DetailBlockDataInterface} from '../interfaces/page.interface';
 import {CMSBlockType} from '../interfaces/content-blocks';
-export interface PagePropsInterface {
+export type PagePropsInterface = {
 	page: PageDataInterface;
 }
 
@@ -30,7 +30,7 @@ export interface ResourcePagePropsInterface extends PagePropsInterface {
 	roles: string;
 }
 
-export interface PageDataInterface {
+export type PageDataInterface = {
 	id: string;
 	__typename: string;
 	market: string;
@@ -44,7 +44,7 @@ export interface PageDataInterface {
 	blocks: CMSBlockType[];
 }
 
-export interface DownloadInterface {
+export type DownloadInterface = {
 	roles: string;
 	body: {
 		html: string;

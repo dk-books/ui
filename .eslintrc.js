@@ -13,6 +13,7 @@ module.exports = {
 				'xo-typescript',
 			],
 			files: [
+				'*.js',
 				'*.ts',
 				'*.tsx',
 			],
@@ -22,12 +23,18 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
+	ignorePatterns: ['dist', '.eslintrc.js'],
 	plugins: [
 		'react',
 	],
 	rules: {
-		'linebreak-style': 0,
-		'multiline-ternary': ['error', 'never'],
-		'camelcase': 'off',
+		'react/no-unescaped-entities': 'off',
+    '@next/next/no-page-custom-font': 'off',
+		// '@typescript-eslint/no-explicit-any': 'off',
+		// 'linebreak-style': 0,
+		// 'multiline-ternary': ['error', 'never'],
+		// 'camelcase': 'off',
+		// '@typescript-eslint/no-unsafe-call': 'off',
+		// 'react/no-unescaped-entities': 'off',
 	},
 };

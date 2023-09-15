@@ -1,6 +1,6 @@
 import type {ImageInterface,	NewImageInterface} from '../';
 
-export interface FooterInterface {
+export type FooterInterface = {
 	type?: any;
 	navItems?: NavItemInterface[];
 	trademark?: FooterTrademarkInterface;
@@ -10,7 +10,7 @@ export interface FooterInterface {
 	body?: TrademarkContentInterface;
 }
 
-export interface TrademarkContentInterface {
+export type TrademarkContentInterface = {
 	html: string;
 	text: string;
 	raw?: RawInterface;
@@ -20,23 +20,23 @@ export interface RawInterface {
 	children: [];
 }
 
-export interface NavItemInterface {
-	/** what is the name of this nav item */
+export type NavItemInterface = {
+	/** What is the name of this nav item */
 	name?: string;
-	/** what is the src of this link? */
+	/** What is the src of this link? */
 	link?: string;
-	/** what is the id of this element? */
+	/** What is the id of this element? */
 	id?: string;
-	/** what is the title of this nav item */
+	/** What is the title of this nav item */
 	title?: string;
-	/** what is the src of this path? */
+	/** What is the src of this path? */
 	path?: string;
-	/** does this nav item have any children? */
+	/** Does this nav item have any children? */
 	children?: any[];
 	dropdownHeading?: any;
 }
 
-export interface FooterMenuInterface {
+export type FooterMenuInterface = {
 	externalLink?: boolean;
 	submenus?: FooterMenuInterface[];
 	id?: string;
@@ -44,7 +44,7 @@ export interface FooterMenuInterface {
 	path?: string;
 }
 
-export interface FooterTrademarkInterface {
+export type FooterTrademarkInterface = {
 	content?: string;
 	image?: NewImageInterface | ImageInterface;
 	title?: string;

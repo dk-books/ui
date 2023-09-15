@@ -1,12 +1,12 @@
-import { gql } from "graphql-request";
+import {gql} from 'graphql-request';
 
 const fullLanguagesQuery = gql`
 {
-  sites(where: {key: "efe"}) {
-    markets(where: {key: "en"}) {
+  sites(where: {key: 'efe'}) {
+    markets(where: {key: 'en'}) {
       header {
         menu {
-          submenus(where: {title: "Change Language"}) {
+          submenus(where: {title: 'Change Language'}) {
             submenus {
               title
               path
@@ -18,4 +18,4 @@ const fullLanguagesQuery = gql`
  }
 }`;
 
-export { fullLanguagesQuery };
+export {fullLanguagesQuery};

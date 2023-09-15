@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: [
-		"./src/**/*.{js,jsx,ts,tsx,png}"
-	],
-	theme: {
+  content: [
+		"./src/**/*.{ts,tsx}",
+    "./stories/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
 		extend: {
 			backgroundImage: {
 				'triangle': "url('/images/triangle.png')",
@@ -14,7 +15,8 @@ module.exports = {
 			},
 			padding: {
 				'1/3': '33.33333%',
-				'2/3': '66.66667%'
+				'2/3': '66.66667%',
+				'17.75': '4.4375rem', // 71px
 			},
 			margin: {
 				'1/3': '33.33333%',
@@ -67,9 +69,6 @@ module.exports = {
 				'42': '42px',
 				'44': '44px',
 				'49': '49px'
-			},
-			padding: {
-				'17.75': '4.4375rem', // 71px
 			},
 			inset: {
 				'6.25': '1.563rem', //25px
@@ -293,16 +292,7 @@ module.exports = {
 			'50': '50px',
 			'60': '60px',
 			'70': '70px',
-		},
-		backgroundSize: {
-			'30': '1.275rem'
-		},
-		backgroundSize: {
-      'auto': 'auto',
-      'cover': 'cover',
-      'contain': 'contain',
-      '10%': '10%',
-    },
+		}
   },
   variants: {
     extend: {
@@ -322,5 +312,6 @@ module.exports = {
       borderWidth: ['first', 'last'],
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [],
 }
+

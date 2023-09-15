@@ -9,34 +9,34 @@ import {
 export * from './picture';
 export * from './footer';
 export * from './button';
-import { CMSBlockType } from "./content-blocks";
+import {CMSBlockType} from "./content-blocks";
 
 type BodyInterface = any;
 
 type CategorisedBlocks = {
-	mainContent: Array<CMSBlockType>,
-	headerContent: CMSHeaderBlockInterface,
-	footerContent: CMSFooterBlockInterface
+	mainContent: Array<CMSBlockType>;
+	headerContent: CMSHeaderBlockInterface;
+	footerContent: CMSFooterBlockInterface;
 };
 
 interface HeaderInterface {
-	/** what is this data for? */
+	/** What is this data for? */
 	type?: any;
-	/** the main image in the header */
+	/** The main image in the header */
 	image?: ImageInterface;
 	logo?: NewImageInterface;
-	/** the content for the sign-in */
+	/** The content for the sign-in */
 	signInText?: string;
-	/** the content for the login */
+	/** The content for the login */
 	loginText?: string;
 	/** Country settings button */
 	countryText?: string;
 	countrySettings?: ImageButtonInterface;
 	countryFlag?: NewImageInterface;
-	/** the items in the navigation */
+	/** The items in the navigation */
 	navItems?: NavItemInterface[];
 	menu?: NewMenuItemInterface | any;
-	/** the items for search-bar */
+	/** The items for search-bar */
 	searchPlaceholder?: string;
 	recentlySearched?: string;
 	deleteText?: string;
@@ -49,7 +49,7 @@ interface HeaderInterface {
 }
 
 export interface ImageButtonInterface {
-	/** button label */
+	/** Button label */
 	label?: string;
 	image?: ImageInterface;
 }
@@ -57,30 +57,27 @@ export interface ImageButtonInterface {
 interface ImageInterface extends CMSImageInterface {
 	/** What field is this for? */
 	field?: string;
-	/** alt text */
+	/** Alt text */
 	alt?: string;
-	/** image source */
+	/** Image source */
 	source?: ImageSource;
-	// url?: string;
-	// height?: number;
-	// width?: number;
 }
 
 interface ImageSource {
-	/** name of the image file */
+	/** Name of the image file */
 	filename: string;
-	/** bucket location where the image file sits */
+	/** Bucket location where the image file sits */
 	location: string;
 }
 
 
-export interface MenuItemInterface {
+export type MenuItemInterface = {
 	submenus?: SubMenuInterface[];
 	name?: string;
 	link?: string;
 	dropdownHeading?: string;
 }
-export interface NewMenuItemInterface {
+export type NewMenuItemInterface = {
 	id?: string;
 	title?: string;
 	submenus?: SubMenuInterface[];
@@ -89,7 +86,7 @@ export interface NewMenuItemInterface {
 	icon?: ImageInterface;
 }
 
-export interface SubMenuInterface {
+export type SubMenuInterface = {
 	id?: string;
 	title?: string;
 	path?: string;
@@ -98,16 +95,16 @@ export interface SubMenuInterface {
 	link?: string;
 	icon?: ImageInterface;
 }
-export interface NavSubItemInterface {
+export type NavSubItemInterface = {
 	id?: string;
 	title?: string;
 	path?: string;
 	icon?: ImageInterface;
 }
 
-/** button with image */
+/** Button with image */
 export interface ImageButtonInterface {
-	/** button label */
+	/** Button label */
 	label?: string;
 	image?: ImageInterface;
 }
@@ -155,34 +152,34 @@ export type {
 	BodyInterface
 };
 
-export interface PageLayoutInterface {
-  /** The data for the header component */
-  headerData?: HeaderInterface;
-  /** The data for the footer component */
-  footerData?: FooterInterface;
-  /** The data for the main content on this page */
-  children: JSX.Element;
-  /** are we showing a minimal header */
-  minimalHeader?: boolean;
+export type PageLayoutInterface = {
+	/** The data for the header component */
+	headerData?: HeaderInterface;
+	/** The data for the footer component */
+	footerData?: FooterInterface;
+	/** The data for the main content on this page */
+	children: JSX.Element;
+	/** Are we showing a minimal header */
+	minimalHeader?: boolean;
 }
 
-export interface PageMetaDataInterface {
-  seo?: MetaDataSEOInterface
-  image?: MetaAataImageInterface
+export type PageMetaDataInterface = {
+	seo?: MetaDataSEOInterface;
+	image?: MetaAataImageInterface;
 }
 
-export interface MetaAataImageInterface {
-  url: string;
+export type MetaAataImageInterface = {
+	url: string;
 }
 
-export interface MetaDataSEOInterface {
-  id: string;
-  title: string;
-  description: string;
-  keywords?: string;
+export type MetaDataSEOInterface = {
+	id: string;
+	title: string;
+	description: string;
+	keywords?: string;
 }
 
-export interface CardSwitcherInterfaces {
+export type CardSwitcherInterfaces = {
 	children: React.ReactNode;
 	onClick?: () => void;
 	link?: string;

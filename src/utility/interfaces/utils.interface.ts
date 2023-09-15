@@ -44,21 +44,21 @@ interface CTACardInterface {
 }
 
 export interface ButtonCardInterface {
-  /** button title */
-  title: string;
-  /** Button link */
-  link: string;
-  /** what colour is this button */
-  colour: string;
-  /** If the button is for an external link, an icon will be dispalayed */
-  isExternalLink: boolean;
-  /** Button icon src */
-  iconSrc?: string;
+	/** Button title */
+	title: string;
+	/** Button link */
+	link: string;
+	/** What colour is this button */
+	colour: string;
+	/** If the button is for an external link, an icon will be dispalayed */
+	isExternalLink: boolean;
+	/** Button icon src */
+	iconSrc?: string;
 }
 
 export interface ColorSchemeInterface {
-  background: string;
-  backgroundHover: string;
+	background: string;
+	backgroundHover: string;
 }
 
 export type CardBlockLayoutType = 'four_column' | 'three_column' | 'two_column' | 'one_column';
@@ -67,35 +67,35 @@ export type CTACardTypeName = 'Cta';
 export type ARTICLECardTypeName = 'Article';
 export type EVENTCardTypeName = 'Event';
 
-export interface CMSCardBlockInterface {
-  id: string;
-  title: string;
-  body: any;
-  heading?: string;
-  path?: string;
-  type?: string;
-  __typename: string;
-  layout: CardBlockLayoutType;
-  cards: Array<CTACardInterface>;
-  submitButtonText?: string;
-  index?: number;
-  bookSeriesIndex?: number;
+export type CMSCardBlockInterface = {
+	id: string;
+	title: string;
+	body: any;
+	heading?: string;
+	path?: string;
+	type?: string;
+	__typename: string;
+	layout: CardBlockLayoutType;
+	cards: Array<CTACardInterface>;
+	submitButtonText?: string;
+	index?: number;
+	bookSeriesIndex?: number;
 }
-export interface OverlayPropsInterface {
-  // /** content to go inside the modal */
-  // children: JSX.Element[];
-  /** should the modal be displayed? */
-  display: boolean;
-  content?: {
-    id: string;
-    title: string;
-    body?: {
-      text?: string;
-      html?: string;
-    };
-    wallImage?: {
-      url?: string;
-    };
-    colourSchema?: string;
-  };
+export type OverlayPropsInterface = {
+	// /** content to go inside the modal */
+	// children: JSX.Element[];
+	/** should the modal be displayed? */
+	display: boolean;
+	content?: {
+		id: string;
+		title: string;
+		body?: {
+			text?: string;
+			html?: string;
+		};
+		wallImage?: {
+			url?: string;
+		};
+		colourSchema?: string;
+	};
 }
