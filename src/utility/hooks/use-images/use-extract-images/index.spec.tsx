@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import {useExtractImages} from '.';
 import {renderHook} from '@testing-library/react-hooks';
 
+=======
+>>>>>>> d61a5ac658ef921cdab19fff88231e40f2e4b3f7
 describe('useExtractImages', () => {
 	it('should extraxt images', () => {
 		const response = {
@@ -32,5 +35,6 @@ describe('useExtractImages', () => {
 				},
 			],
 		};
+		return response;
 	});
 });

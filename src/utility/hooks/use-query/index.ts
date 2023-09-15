@@ -1,10 +1,7 @@
-import {useEffect, useState} from 'react';
-import {useZapToTop} from '../use-zap-to-top';
+import {useState} from 'react';
 
-function useQuery<Tdata>(query: string): [Tdata | undefined] {
-	const [data, setData] = useState<Tdata>();
-	const {zapToTop} = useZapToTop();
-
+function useQuery<Tdata>(): [Tdata | undefined] {
+	const [data] = useState<Tdata>();
 	return [data];
 }
 

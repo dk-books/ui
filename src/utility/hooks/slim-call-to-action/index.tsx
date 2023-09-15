@@ -1,7 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import Image from 'next/image';
 import {Button} from '../../../app/atoms/button';
+=======
+import {Button} from '../../../components/atoms/button';
+>>>>>>> d61a5ac658ef921cdab19fff88231e40f2e4b3f7
 import type {FC, ReactNode} from 'react';
 
 type SlimCallToActionProps = {
@@ -30,11 +34,11 @@ const SlimCallToAction: FC<SlimCallToActionProps> = ({
 
 	if (imageUrl && href) {
 		ctas.push(
-			<div><Link href={href}>
+			<div><a href={href}>
 				<div className='relative w-full h-[91px]' key={href}>
-					<Image src={imageUrl} alt={'image'} layout='fill' objectFit='contain' />
+					<img src={imageUrl} alt={'image'} />
 				</div>
-			</Link>
+			</a>
 			</div>,
 		);
 	}
@@ -43,7 +47,6 @@ const SlimCallToAction: FC<SlimCallToActionProps> = ({
 		ctas.push(
 			<Button
 				repo={repo}
-				wide={true}
 				colour={button.colour}
 				href={href}
 				icon={button.icon}

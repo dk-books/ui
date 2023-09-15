@@ -12,9 +12,16 @@ yarn dev
 pnpm dev
 ```
 
+<<<<<<< HEAD
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+=======
+### `npm run storybook`
+
+Runs the app in the development mode.\
+Open [http://localhost:6006/](http://localhost:6006/) to view it in your browser.
+>>>>>>> d61a5ac658ef921cdab19fff88231e40f2e4b3f7
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 

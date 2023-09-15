@@ -1,12 +1,5 @@
 import React from 'react';
-import {plainTextClasses} from './index.style';
-
-export enum PlainTextSize {
-	SmallPrint = 'smallPrint',
-	Default = 'default',
-	Large = 'large',
-	XL = 'xl',
-}
+import {plainTextClasses, PlainTextSize} from './index.style';
 
 export type PlainTextProps = {
 	size?: PlainTextSize;
@@ -14,7 +7,7 @@ export type PlainTextProps = {
 	children: string;
 };
 
-export const PlainText: React.FC<PlainTextProps> = ({size, bold, children, ...props}: PlainTextProps) => {
+export const PlainText: React.FC<PlainTextProps> = ({size, bold, children}: PlainTextProps) => {
 	const classes = plainTextClasses({size, bold, children});
 	return <div className={classes}>{children}</div>;
 };

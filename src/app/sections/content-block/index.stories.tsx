@@ -6,8 +6,8 @@ export default {title: 'DK/Sections/ContentBlock', component: ContentBlock};
 
 const Template: Story<React.ComponentProps<typeof ContentBlock>> = args => <ContentBlock {...args} />;
 
-export const ctaText = Template.bind({});
-ctaText.args = {
+export const CtaText = Template.bind({});
+CtaText.args = {
 	repo: 'efe',
 	type: 'Cta',
 	button: {
@@ -22,10 +22,10 @@ ctaText.args = {
 	externalLink: false,
 };
 
-ctaText.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}};
+CtaText.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}};
 
-export const ctaHtml = Template.bind({});
-ctaHtml.args = {
+export const CtaHtml = Template.bind({});
+CtaHtml.args = {
 	repo: 'efe',
 	type: 'Cta',
 	button: {
@@ -41,10 +41,10 @@ ctaHtml.args = {
 	externalLink: false,
 };
 
-ctaHtml.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}};
+CtaHtml.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}};
 
-export const ctaSlim = Template.bind({});
-ctaSlim.args = {
+export const CtaSlim = Template.bind({});
+CtaSlim.args = {
 	repo: 'efe',
 	type: 'Cta',
 	button: {
@@ -58,5 +58,5 @@ ctaSlim.args = {
 	externalLink: false,
 };
 
-ctaSlim.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}};
+CtaSlim.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}};
 

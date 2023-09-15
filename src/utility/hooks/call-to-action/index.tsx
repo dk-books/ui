@@ -1,7 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import Image from 'next/image';
 import {Button} from '../../../app/atoms/button';
+=======
+import {Button} from '../../../components/atoms/button';
+>>>>>>> d61a5ac658ef921cdab19fff88231e40f2e4b3f7
 import type {FC, ReactNode} from 'react';
 
 type CallToActionProps = {
@@ -43,9 +47,9 @@ const CallToAction: FC<CallToActionProps> = ({
 	if (imageUrl && href) {
 		ctas.push(
 			<div className='px-1 m-1 relative w-full h-64'>
-				<Link href={href} key={href}>
-					<div><Image src={imageUrl} alt={title} layout='fill' objectFit='contain' /></div>
-				</Link>
+				<a href={href} key={href}>
+					<div><img src={imageUrl} alt={title}/></div>
+				</a>
 			</div>,
 		);
 	}

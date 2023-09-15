@@ -8,7 +8,7 @@ const StoryType: ComponentMeta<typeof Loader> = {
 };
 export default StoryType;
 
-const Template: ComponentStory<typeof Loader> = args => (
+const Template: ComponentStory<typeof Loader> = () => (
 	<>
 		<Loader />
 	</>

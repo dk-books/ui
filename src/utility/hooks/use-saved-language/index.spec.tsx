@@ -5,7 +5,7 @@ import {useSavedLanguage} from '.';
 describe('useSavedLanguage', () => {
 	const setLanguage = (value: string) => {
 		const {result: {current}} = renderHook(() => useSavedLanguage());
-		const [defaultSavedLanguage, saveLanguage] = current;
+		const [saveLanguage] = current;
 
 		saveLanguage(value);
 	};

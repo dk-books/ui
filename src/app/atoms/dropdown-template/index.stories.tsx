@@ -12,14 +12,14 @@ const Template: ComponentStory<typeof DropdownTemplate> = args => (
 	<DropdownTemplate {...args}>{args.children}</DropdownTemplate>
 );
 
-export const componentData = Template.bind({});
+export const ComponentData = Template.bind({});
 
-componentData.args = {
+ComponentData.args = {
 	display: true,
 	children: <div>Dropdown Template</div>,
 };
 
-componentData.parameters = {
+ComponentData.parameters = {
 	design: {
 		type: 'figma',
 		url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843',
