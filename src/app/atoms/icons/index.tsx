@@ -1,9 +1,5 @@
 import React from 'react';
 import type {FC} from 'react';
-<<<<<<< HEAD:src/app/atoms/icons/index.tsx
-import Image from 'next/image';
-=======
->>>>>>> d61a5ac658ef921cdab19fff88231e40f2e4b3f7:src/components/atoms/icons/index.tsx
 import {images} from './images';
 
 export type IconsScheme = {

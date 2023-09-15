@@ -1,11 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-import Image from 'next/image';
 import {Button} from '../../../app/atoms/button';
-=======
-import {Button} from '../../../components/atoms/button';
->>>>>>> d61a5ac658ef921cdab19fff88231e40f2e4b3f7
 import type {FC, ReactNode} from 'react';
 
 type CallToActionProps = {

@@ -1,18 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-<<<<<<< HEAD
   content: [
 		"./src/**/*.{ts,tsx}",
     "./stories/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-=======
-	content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-	theme: {
->>>>>>> d61a5ac658ef921cdab19fff88231e40f2e4b3f7
 		extend: {
 			backgroundImage: {
 				'triangle': "url('/images/triangle.png')",
@@ -167,7 +159,6 @@ module.exports = {
 				'600': '#33B4DF',
 				'500': '#66C7E7',
 				'400': '#99D9EF',
-				'350': '#CCECF7',
 				'300': '#CCECF7',
 				'200': '#E6F6FB',
 				'100': '#F2FAFD',
@@ -201,7 +192,6 @@ module.exports = {
 				'600': '#B4D044',
 				'500': '#C6DB72',
 				'400': '#DAE8A2',
-				'350': '#E9F0CD',
 				'300': '#E9F0CD',
 				'200': '#F2F6E4',
 				'100': '#F7F8F0',
@@ -302,18 +292,7 @@ module.exports = {
 			'50': '50px',
 			'60': '60px',
 			'70': '70px',
-<<<<<<< HEAD
 		}
-=======
-		},
-		backgroundSize: {
-			'30': '1.275rem',
-      'auto': 'auto',
-      'cover': 'cover',
-      'contain': 'contain',
-      '10%': '10%',
-    },
->>>>>>> d61a5ac658ef921cdab19fff88231e40f2e4b3f7
   },
   variants: {
     extend: {
