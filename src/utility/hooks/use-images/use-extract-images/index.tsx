@@ -1,5 +1,6 @@
 import {ImagesQueryResult} from '..';
 
+
 type Image = {
 	title: string;
 	url: string;
