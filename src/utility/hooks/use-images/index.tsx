@@ -19,4 +19,4 @@ const useImages = (imageTitles: string[]) => {
 	return [];
 };
 
-export {useImages, type ImagesQueryResult};
+export {useImages};
