@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import {gql} from 'graphql-request';
-=======
-import { gql } from 'graphql-request';
->>>>>>> d61a5ac658ef921cdab19fff88231e40f2e4b3f7
 import {
 	OnHeaderGraphQl,
 	OnHeaderGraphQl2,

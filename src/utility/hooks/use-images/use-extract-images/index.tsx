@@ -1,4 +1,4 @@
-import type {ImagesQueryResult} from '..';
+import {ImagesQueryResult} from '..';
 
 type Image = {
 	title: string;

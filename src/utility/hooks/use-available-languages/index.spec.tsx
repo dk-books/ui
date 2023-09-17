@@ -1,5 +1,4 @@
 import '@testing-library/jest-dom';
-<<<<<<< HEAD
 import React from 'react';
 import {renderHook} from '@testing-library/react-hooks';
 import useAvailableLanguages from '.';
@@ -7,9 +6,6 @@ import useAvailableLanguages from '.';
 import {GraphQLHandler} from 'graphql-mocks';
 import {nockHandler} from '@graphql-mocks/network-nock';
 import nock from 'nock';
-=======
-// import {GraphQLHandler} from 'graphql-mocks';
->>>>>>> d61a5ac658ef921cdab19fff88231e40f2e4b3f7
 
 describe('useAvailableLanguages', () => {
 	/*

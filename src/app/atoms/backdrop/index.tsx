@@ -9,7 +9,7 @@ type BackdropProps = {
 const Backdrop: FC<BackdropProps> = ({
 	children,
 }) => {
-	const imageUrls = useImages([
+	const imageUrls: any = useImages([
 		'Top-left_new',
 		'Top-right_new',
 		'bottom-left_new',

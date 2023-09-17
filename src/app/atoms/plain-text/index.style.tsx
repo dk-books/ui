@@ -1,7 +1,7 @@
 import type {PlainTextProps} from './index';
 import classNames from 'classnames';
 
-enum PlainTextSize {
+export enum PlainTextSize {
 	SmallPrint = 'smallPrint',
 	Default = 'default',
 	Large = 'large',

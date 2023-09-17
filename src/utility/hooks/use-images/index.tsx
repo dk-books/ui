@@ -14,8 +14,9 @@ type ImagesQueryResult = {
 };
 
 const useImages = (imageTitles: string[]) => {
-	const [queryResult] = useQuery<ImagesQueryResult>(frontPageImages);
-	return useExtractImages(imageTitles, queryResult);
+	// const [queryResult] = useQuery<ImagesQueryResult>(frontPageImages);
+	// return useExtractImages(imageTitles, queryResult);
+	return [];
 };
 
-export {useImages};
+export {useImages, type ImagesQueryResult};
