@@ -159,6 +159,7 @@ module.exports = {
 				'600': '#33B4DF',
 				'500': '#66C7E7',
 				'400': '#99D9EF',
+				'350': '#CCECF7',
 				'300': '#CCECF7',
 				'200': '#E6F6FB',
 				'100': '#F2FAFD',
@@ -192,6 +193,7 @@ module.exports = {
 				'600': '#B4D044',
 				'500': '#C6DB72',
 				'400': '#DAE8A2',
+				'350': '#E9F0CD',
 				'300': '#E9F0CD',
 				'200': '#F2F6E4',
 				'100': '#F7F8F0',
@@ -240,6 +242,7 @@ module.exports = {
 				'200': '#FFEEF4',
 				'100': '#FFF6FA',
 			},
+			white: '#fff',
 			// specific components
 			alert:{
 				success: {
