@@ -1,2 +1,2 @@
-import './src/app/globals.scss';
+import './index.scss';
 export * from './src/app';
