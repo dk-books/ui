@@ -45,7 +45,7 @@ External.args = {
 	repo: 'dkl',
 	children: 'DKL External Button',
 	colour: 'default',
-	icon: 'external',
+	icon: 'computer',
 	externalLink: true,
 	href: '/books',
 };
