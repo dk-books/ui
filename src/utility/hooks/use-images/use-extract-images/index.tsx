@@ -1,4 +1,4 @@
-import {ImagesQueryResult} from '..';
+import {ImagesQueryResult} from '../index';
 
 
 type Image = {

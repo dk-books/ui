@@ -18,6 +18,11 @@ type Response = {
   }]
 };
 
+interface dataProps {
+	title?: string;
+	path?: any;
+}
+
 const useAvailableLanguages = (): Array<{ language: string, code: string }> => {
 
   const [data]: any = useQuery<Response>(fullLanguagesQuery);
@@ -33,7 +38,7 @@ const useAvailableLanguages = (): Array<{ language: string, code: string }> => {
     .menu
     .submenus[0]
     .submenus
-    .map(({ title, path }) => {
+    .map(({ title, path }: dataProps) => {
 
       return {
         language: title,
