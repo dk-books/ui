@@ -1,6 +1,6 @@
 import {gql} from 'graphql-request';
 
-const frontPageImages = gql`
+const frontPageImages: any = gql`
 {
   pages(where: {slug: "home", market: en }) {
     blocks {
