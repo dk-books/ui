@@ -1,2 +1,2 @@
 export * from './atoms';
-import './index.scss';
+import './index.css';
