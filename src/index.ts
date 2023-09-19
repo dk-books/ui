@@ -1,2 +1,2 @@
-import './app/index.css';
+import './index.css';
 export * from './app';
