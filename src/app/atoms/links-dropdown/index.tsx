@@ -19,6 +19,7 @@ type LinksDropdownProps = {
 		path: string;
 	}>;
 	button: ReactNode;
+	repo: string;
 };
 
 const splitLinksIntoColumns = (links: DropdownLink[]): DropdownLink[][] => {
@@ -36,6 +37,7 @@ const LinksDropdown: FC<LinksDropdownProps> = ({
 	enabled = true,
 	links,
 	button,
+	repo,
 	onClicked}) => {
 	let columns;
 	if (links?.length) {
@@ -55,7 +57,7 @@ const LinksDropdown: FC<LinksDropdownProps> = ({
 										onClicked(link);
 									}}>
 									<Button
-										repo={'efe'}
+										repo={repo ? repo : 'efe'}
 										externalLink={link.externalLink}
 										path={link.path}
 										icon={link.icon?.url}>
