@@ -39,6 +39,7 @@
     "graphql-mocks": "^0.10.0",
     "graphql-request": "^6.1.0",
     "next-router-mock": "^0.9.9",
+    "next-routes": "^1.4.2",
     "nock": "^13.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
