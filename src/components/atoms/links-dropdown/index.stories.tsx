@@ -1,6 +1,6 @@
 import React from 'react';
 import type {Story} from '@storybook/react';
-import LinksDropdown from './';
+import LinksDropdown from '.';
 
 export default {
 	title: 'DK/Atom/LinksDropdown',
