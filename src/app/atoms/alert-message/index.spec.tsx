@@ -5,8 +5,8 @@ import {AlertMessage} from '.';
 describe('AlertMessage', () => {
 	it('renders alert message message', () => {
 		render(<AlertMessage
-			successMessage={'You have successfully saved your updated details'}
-			errorMessage={'Your update failed due to an internal error. Please try again later'}
+			SuccessMessage={'You have successfully saved your updated details'}
+			ErrorMessage={'Your update failed due to an internal error. Please try again later'}
 		/>);
 
 		expect(screen.getByText('You have successfully saved your updated details')).toBeInTheDocument();
