@@ -30,7 +30,7 @@ const SlimCallToAction: FC<SlimCallToActionProps> = ({
 		ctas.push(
 			<div><a href={href}>
 				<div className='relative w-full h-[91px]' key={href}>
-					<img src={imageUrl} alt={'image'} />
+					<img src={imageUrl} alt={imageUrl} />
 				</div>
 			</a>
 			</div>,
