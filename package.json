@@ -1,7 +1,7 @@
 {
   "name": "@dk-books/ui",
   "homepage": "https://dk-books.github.io/ui/",
-  "version": "0.9.01",
+  "version": "1.0.0",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
     "access": "public"
