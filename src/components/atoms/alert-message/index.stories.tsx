@@ -8,16 +8,16 @@ const Template: Story<React.ComponentProps<typeof AlertMessage>> = args => <Aler
 
 export const SuccessMessage = Template.bind({});
 SuccessMessage.args = {
-	SuccessMessage: 'You have successfully saved your updated details'
+	SuccessMessage: 'You have successfully saved your updated details',
 };
 SuccessMessage.parameters = {
-	design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}
+	design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'},
 };
 
 export const ErrorMessage = Template.bind({});
 ErrorMessage.args = {
-	ErrorMessage: 'Your update failed due to an internal error. Please try again later'
+	ErrorMessage: 'Your update failed due to an internal error. Please try again later',
 };
 ErrorMessage.parameters = {
-	design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}
+	design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'},
 };

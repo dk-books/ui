@@ -27,6 +27,7 @@ module.exports = {
 	],
 	rules: {
 		'linebreak-style': 0,
-		'multiline-ternary': ['error', 'never']
+		'multiline-ternary': ['error', 'never'],
+		"camelcase": ["error", {"properties": "never"}]
 	},
 };
