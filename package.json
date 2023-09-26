@@ -1,7 +1,7 @@
 {
   "name": "@dk-books/ui",
   "homepage": "https://dk-books.github.io/ui/",
-  "version": "3.0.01",
+  "version": "3.0.02",
   "main": "build/bundle.js",
   "repository": "dk-books/ui",
   "publishConfig": {
