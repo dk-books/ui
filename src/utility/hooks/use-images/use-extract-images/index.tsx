@@ -1,5 +1,4 @@
-import {ImagesQueryResult} from '../index';
-
+import type {ImagesQueryResult} from '..';
 
 type Image = {
 	title: string;

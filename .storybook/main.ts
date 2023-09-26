@@ -1,38 +1,19 @@
-const path = require('path');
-
 module.exports = {
-  stories: [
-		"../src/**/*.mdx",
-		"../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
-	],
-  addons: [
+  "stories": [
+    "../src/**/*.stories.mdx",
+    "../src/**/*.stories.@(js|jsx|ts|tsx)"
+  ],
+  "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/preset-create-react-app",
     "@storybook/addon-interactions",
-		{
-      name: '@storybook/addon-styling',
-      options: {
-        sass: {
-          // Require your Sass preprocessor here
-          implementation: require('sass'),
-        },
-      },
-    },
+    "@storybook/preset-create-react-app",
+    "storybook-addon-next-router",
+    "storybook-addon-designs",
   ],
-  framework: {
-    "name": "@storybook/react-webpack5",
-    "options": {}
-  },
-	staticDirs: [
-		'../public',
-		'../images',
-		'../public/assets',
-		'../public/images',
-		'../src/stories/assets',
-	],
-  docs: {
-    autodocs: "tag",
-		docsPage: true
-  },
-};
+  "staticDir": ["../public", "../src/assets/svgs"],
+  "framework": "@storybook/react",
+  "core": {
+    "builder": "@storybook/builder-webpack5"
+  }
+}

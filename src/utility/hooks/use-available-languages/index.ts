@@ -1,4 +1,4 @@
-import { useQuery } from "@apollo/client";
+import useQuery from "../../hooks/use-query";
 import { fullLanguagesQuery } from '../../api/queries/languages';
 
 type Response = {
@@ -18,14 +18,9 @@ type Response = {
   }]
 };
 
-interface dataProps {
-	title?: string;
-	path?: any;
-}
-
 const useAvailableLanguages = (): Array<{ language: string, code: string }> => {
 
-  const [data]: any = useQuery<Response>(fullLanguagesQuery);
+  const [data] = useQuery<Response>(fullLanguagesQuery);
 
   if(!data || !data.sites) {
     return [];
@@ -38,7 +33,7 @@ const useAvailableLanguages = (): Array<{ language: string, code: string }> => {
     .menu
     .submenus[0]
     .submenus
-    .map(({ title, path }: dataProps) => {
+    .map(({ title, path }) => {
 
       return {
         language: title,

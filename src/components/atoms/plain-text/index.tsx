@@ -14,7 +14,8 @@ export type PlainTextProps = {
 	children: string;
 };
 
-export const PlainText: React.FC<PlainTextProps> = ({size, bold, children}: PlainTextProps) => {
+export const PlainText: React.FC<PlainTextProps> = ({size, bold, children, ...props}: PlainTextProps) => {
 	const classes = plainTextClasses({size, bold, children});
 	return <div className={classes}>{children}</div>;
 };
+

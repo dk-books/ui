@@ -6,26 +6,26 @@ export default {title: 'DK/Atom/Icons', component: Icons};
 
 const Template: Story<React.ComponentProps<typeof Icons>> = args => <Icons {...args} />;
 
-export const PublicImages = Template.bind({});
-PublicImages.args = {
-	icon: './images/headphones-blue.jpg',
+export const publicImages = Template.bind({});
+publicImages.args = {
+	icon: 'book',
 };
 
-PublicImages.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}};
+publicImages.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}};
 
-export const Hero = Template.bind({});
-Hero.args = {
+export const hero = Template.bind({});
+hero.args = {
 	icon: 'computer',
 };
 
-Hero.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}};
+hero.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}};
 
-export const Exteral = Template.bind({});
-Exteral.args = {
+export const exteral = Template.bind({});
+exteral.args = {
 	url: 'https://media.graphassets.com/Ga6W3iCCReG3TQDocMTP',
 	width: 84,
 	height: 58,
 	description: 'icon',
 };
 
-Exteral.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}};
+exteral.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}};

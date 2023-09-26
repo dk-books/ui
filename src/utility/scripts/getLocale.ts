@@ -1,10 +1,9 @@
 import {useRouter} from 'next/router';
 import {useRef, useEffect} from 'react';
 
-export const GetLocale = () => {
+export const getLocale = () => {
 	let country = 'us';
 	const mounted = useRef(false);
-	const getRouter = useRouter();
 
 	useEffect(() => {
 		mounted.current = true;
@@ -15,9 +14,8 @@ export const GetLocale = () => {
 	}, []);
 
 	if (mounted) {
-		const router = useRouter();
+		const router = useRouter()
 		country = router.query.country as string;
 	}
-
 	return country;
-};
+}

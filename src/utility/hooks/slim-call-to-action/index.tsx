@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import {Button} from '../../../components/atoms/button';
 import type {FC, ReactNode} from 'react';
 
@@ -28,11 +30,11 @@ const SlimCallToAction: FC<SlimCallToActionProps> = ({
 
 	if (imageUrl && href) {
 		ctas.push(
-			<div><a href={href}>
+			<div><Link href={href}>
 				<div className='relative w-full h-[91px]' key={href}>
-					<img src={imageUrl} alt={imageUrl} />
+					<Image src={imageUrl} alt={'image'} layout='fill' objectFit='contain' />
 				</div>
-			</a>
+			</Link>
 			</div>,
 		);
 	}
@@ -41,6 +43,7 @@ const SlimCallToAction: FC<SlimCallToActionProps> = ({
 		ctas.push(
 			<Button
 				repo={repo}
+				wide={true}
 				colour={button.colour}
 				href={href}
 				icon={button.icon}

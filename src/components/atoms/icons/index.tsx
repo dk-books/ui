@@ -1,5 +1,9 @@
 import React from 'react';
 import type {FC} from 'react';
+import {
+	DesktopComputerIcon,
+} from '@heroicons/react/solid';
+import Image from 'next/image';
 import {images} from './images';
 
 export type IconsScheme = {
@@ -14,7 +18,7 @@ const Icons: FC<IconsScheme> = ({icon, url, width, height, description}) => {
 	if (url) {
 		return (
 			<div className='relative h-5 w-5 url'>
-				<img
+				<Image
 					src={url}
 					alt={description ? description : 'URL description'}
 					width={width ? width : 100}
@@ -31,7 +35,7 @@ const Icons: FC<IconsScheme> = ({icon, url, width, height, description}) => {
 
 	return (
 		<>
-			{iconUrl ? <div className='relative h-5 w-5 icon'><img
+			{iconUrl ? <div className='relative h-5 w-5 icon'><Image
 				src={iconUrl}
 				alt={description ? description : 'Icon description'}
 				width={width ? width : 100}

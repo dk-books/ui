@@ -1,4 +1,4 @@
-import { useQuery } from "@apollo/client";
+import useQuery from '../use-query';
 import {useExtractImages} from './use-extract-images';
 import {frontPageImages} from '../../api/queries/images';
 
@@ -14,8 +14,9 @@ type ImagesQueryResult = {
 };
 
 const useImages = (imageTitles: string[]) => {
-	const [queryResult]: any = useQuery<ImagesQueryResult>(frontPageImages);
+	const [queryResult] = useQuery<ImagesQueryResult>(frontPageImages);
 	return useExtractImages(imageTitles, queryResult);
 };
 
-export {useImages, type ImagesQueryResult};
+export {useImages};
+export type {ImagesQueryResult};

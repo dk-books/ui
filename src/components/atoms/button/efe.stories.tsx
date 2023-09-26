@@ -1,5 +1,6 @@
 import React from 'react';
 import type {ComponentStory, ComponentMeta} from '@storybook/react';
+import {FaBeer} from 'react-icons/fa';
 import {Button} from '.';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

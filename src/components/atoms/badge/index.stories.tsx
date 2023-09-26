@@ -1,7 +1,7 @@
 import React from 'react';
 import type {ComponentStory, ComponentMeta} from '@storybook/react';
 import {Badge} from '.';
-import {BadgeLevelImage} from './badge-level-image';
+import {BadgeLevelImage} from '../badge-level-image';
 
 const StoryType: ComponentMeta<typeof Badge> = {
 	title: 'DK/Atom/Badge',

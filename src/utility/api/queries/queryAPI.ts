@@ -1,4 +1,6 @@
-import {gql} from 'graphql-request';
+import React from 'react';
+import type {FC, ReactNode} from 'react';
+import { gql } from 'graphql-request';
 import {
 	OnHeaderGraphQl,
 	OnHeaderGraphQl2,

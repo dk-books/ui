@@ -1,11 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-		"./src/**/*.{ts,tsx}",
-    "./stories/**/*.{js,ts,jsx,tsx}",
-  ],
-	darkMode: ["class", '[data-mode="dark"]'],
-  theme: {
+	content: [
+		"./src/**/*.{js,jsx,ts,tsx,png}"
+	],
+	theme: {
 		extend: {
 			backgroundImage: {
 				'triangle': "url('/images/triangle.png')",

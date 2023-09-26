@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useQuery } from "@apollo/client";
+import useQuery from "../use-query";
 import { useCountry } from "../use-country";
 import { makeLangaugeBookCMSQuery } from '../../api/queries/queryAPI';
 

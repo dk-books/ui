@@ -1,8 +1,8 @@
 interface ButtonInterface {
-	link: string;
-	text: string;
+link: string;
+text: string;
 }
 
 export type {
-	ButtonInterface,
-};
+	ButtonInterface
+}

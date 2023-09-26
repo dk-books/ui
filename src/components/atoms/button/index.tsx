@@ -1,5 +1,5 @@
 import React from 'react';
-import type {ReactNode} from 'react';
+import type {FC, ReactNode} from 'react';
 import {Icons} from '../icons';
 import {dklBtn} from '../../../utility/themes/dkl/theme';
 import {efeBtn, fontColor} from '../../../utility/themes/efe/theme';
@@ -10,6 +10,7 @@ type ButtonProps = {
 	href?: string;
 	children: ReactNode;
 	icon?: string;
+	wide?: boolean;
 	externalLink?: boolean;
 	width?: string;
 	newTab?: string;
@@ -35,6 +36,7 @@ const Button: React.FC<ButtonProps> = ({
 	children,
 	colour = 'default',
 	icon,
+	wide = false,
 	externalLink = false,
 	text,
 	newTab,
@@ -115,7 +117,7 @@ const Button: React.FC<ButtonProps> = ({
 
 	const buttonWidth = buttonwidth(layout);
 
-	let buttonClass: string | undefined;
+	let buttonClass = null;
 	if (colour) {
 		const pickFontColor = fontColorText ? fontColorText : 'white';
 		buttonClass = `${fontColor[pickFontColor]} ${buttonWidth}`;

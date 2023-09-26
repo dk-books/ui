@@ -1,3 +1,4 @@
+import {renderHook} from "@testing-library/react-hooks";
 
 describe('useImages', () => {
   it('should handle errors', () => {
