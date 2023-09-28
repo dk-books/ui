@@ -1,7 +1,7 @@
 {
   "name": "@dk-books/ui",
   "homepage": "https://dk-books.github.io/ui/",
-  "version": "07.00.00",
+  "version": "07.00.01",
   "main": "build/bundle.js",
   "repository": "dk-books/ui",
   "publishConfig": {
@@ -19,7 +19,7 @@
     "predeploy": "npm run build-storybook",
     "clean": "react-scripts clean",
     "build": "rollup -c",
-    "release": "npm publish --access public",
+    "release": "npm publish",
     "lint": "eslint --ext .tsx,.ts src/components",
     "lint-fix-dry-run": "eslint --ext .tsx,.ts src/components --fix-dry-run",
     "lint-fix": "eslint --ext .tsx,.ts src/components --fix",
@@ -27,7 +27,7 @@
     "test-ci": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -s public",
     "deploy-storybook": "gh-pages -d storybook-static",
     "prepare": "husky install"
   },
