@@ -1,8 +1,8 @@
 module.exports = {
-  "stories": [
-    "../src/**/*.stories.mdx",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)"
-  ],
+  stories: [
+		"../src/**/*.mdx",
+		"../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+	],
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -11,7 +11,14 @@ module.exports = {
     "storybook-addon-next-router",
     "storybook-addon-designs",
   ],
-  "staticDir": ["../public", "../src/assets/svgs"],
+  "staticDir": [
+		'../public',
+		'../images',
+		'../public/assets',
+		'../public/images',
+		'../src/stories/assets',
+		'../src/assets/svgs',
+	],
   "framework": "@storybook/react",
   "core": {
     "builder": "@storybook/builder-webpack5"

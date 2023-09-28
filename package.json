@@ -1,7 +1,7 @@
 {
   "name": "@dk-books/ui",
   "homepage": "https://dk-books.github.io/ui/",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "main": "build/bundle.js",
   "repository": "dk-books/ui",
   "publishConfig": {
@@ -9,6 +9,7 @@
     "access": "public"
   },
   "peerDependencies": {
+		"next": "^13.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
@@ -18,14 +19,14 @@
     "predeploy": "npm run build-storybook",
     "clean": "react-scripts clean",
     "build": "rollup -c",
-    "release": "npm publish",
+    "release": "npm publish --access public",
     "lint": "eslint --ext .tsx,.ts src/components",
     "lint-fix-dry-run": "eslint --ext .tsx,.ts src/components --fix-dry-run",
     "lint-fix": "eslint --ext .tsx,.ts src/components --fix",
     "test": "react-scripts test",
     "test-ci": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
+    "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static",
     "prepare": "husky install"
@@ -73,7 +74,6 @@
     "graphql": "^16.7.1",
     "graphql-mocks": "^0.10.0",
     "graphql-request": "^6.1.0",
-    "next": "^13.5.3",
     "nock": "^13.3.1",
     "npm-check": "^6.0.1",
     "ra-data-graphql": "^4.12.1",
