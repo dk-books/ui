@@ -32,5 +32,5 @@ jobs:
       - name: Publish
         run: npm run release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GPR_ACCESS_TOKEN_APRIL_2023 }}
+          NODE_AUTH_TOKEN: ${{ secrets.GPR_ACCESS_TOKEN_OCT_2023 }}
 
