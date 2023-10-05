@@ -15,6 +15,7 @@ type SlimCallToActionProps = {
 		layout?: string;
 	};
 	externalLink?: boolean;
+	wide?: boolean;
 };
 
 const SlimCallToAction: FC<SlimCallToActionProps> = ({
@@ -24,13 +25,14 @@ const SlimCallToAction: FC<SlimCallToActionProps> = ({
 	href,
 	button,
 	externalLink,
+	wide,
 }) => {
 	const ctas: ReactNode[] = [];
 
 	if (imageUrl && href) {
 		ctas.push(
 			<div><Link href={href}>
-				<div className='relative w-full h-[91px]' key={href}>
+				<div key={href}>
 					<img src={imageUrl} alt={'image'} />
 				</div>
 			</Link>
@@ -42,7 +44,7 @@ const SlimCallToAction: FC<SlimCallToActionProps> = ({
 		ctas.push(
 			<Button
 				repo={repo}
-				wide={true}
+				wide={wide ? wide : false}
 				colour={button.colour}
 				href={href}
 				icon={button.icon}

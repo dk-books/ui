@@ -144,9 +144,10 @@ const Button: React.FC<ButtonProps> = ({
 		);
 	} else {
 		const backButtonStyle = path ? '' : buttonRepo(repo, 'button', colour);
+		const wideStyle = wide ? 'w-full' : '';
 		ctas.push(
 			<>
-				<div className={`flex	${backButtonStyle} ${classnames!}	${buttonClass!}`}>
+				<div className={`flex	${wideStyle} ${backButtonStyle} ${classnames!}	${buttonClass!}`}>
 					{icon && dropdown ? (<div className='items-center justify-center pl-5 pr-2'><Icons icon={icon} /></div>) : null}
 					{icon && !dropdown ? (<div className='items-center justify-center pr-2'><Icons icon={icon} /></div>) : null}
 					{((href ?? type) && children) ? <div className='items-center justify-center mx-auto h-full w-full text-ellipsis whitespace-nowrap overflow-hidden flex items-center'>{buttonHref(href, text, type, classnames)}</div> : null}

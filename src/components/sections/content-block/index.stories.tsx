@@ -56,6 +56,7 @@ ctaSlim.args = {
 	href: '/en/buy-books',
 	imageSrc: 'https://media.graphassets.com/BlzSxAlQi6rc94jHoOQl',
 	externalLink: false,
+	wide: true,
 };
 
 ctaSlim.parameters = {design: {type: 'figma', url: 'https://www.figma.com/file/5Luoo8FHwMRsF3tJhGyHsA/EFE?node-id=0%3A6843'}};

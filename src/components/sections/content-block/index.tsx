@@ -19,6 +19,7 @@ type ContentBlockProps = {
 	title: string;
 	alignContents?: 'left' | 'center';
 	externalLink?: boolean;
+	wide?: boolean;
 };
 
 const ContentBlock: FC<ContentBlockProps> = ({
@@ -33,6 +34,7 @@ const ContentBlock: FC<ContentBlockProps> = ({
 	title,
 	alignContents,
 	externalLink,
+	wide,
 }) => {
 	if (type === 'Cta') {
 		const advert = ctaType === 'advert' ? true : null;
@@ -60,6 +62,7 @@ const ContentBlock: FC<ContentBlockProps> = ({
 					imageUrl={imageSrc}
 					button={button}
 					externalLink={externalLink}
+					wide={wide ? wide : false}
 				/>
 			</div>
 		);
