@@ -119,7 +119,7 @@
     "husky": "^8.0.3",
     "jest-axe": "^8.0.0",
     "next-router-mock": "^0.9.7",
-    "postcss": "^8.4.20",
+    "postcss": "^8.4.31",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
