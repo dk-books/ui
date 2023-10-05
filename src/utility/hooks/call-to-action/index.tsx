@@ -43,7 +43,7 @@ const CallToAction: FC<CallToActionProps> = ({
 		ctas.push(
 			<div className='px-1 m-1 relative w-full h-64'>
 				<Link href={href} key={href}>
-					<div><img src={imageUrl} alt={title}/></div>
+					<div><img className='mx-auto' src={imageUrl} alt={title}/></div>
 				</Link>
 			</div>,
 		);
