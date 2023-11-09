@@ -4,6 +4,7 @@ import {Icons} from '../icons';
 import {dklBtn} from '../../../utility/themes/dkl/theme';
 import {efeBtn, fontColor} from '../../../utility/themes/efe/theme';
 import * as ga from '../../../utility/ga';
+import Link from 'next/link';
 
 type ButtonProps = {
 	repo?: string;
@@ -30,7 +31,7 @@ type ButtonProps = {
 	fontColorText?: string;
 };
 
-const Button: React.FC<ButtonProps> = ({
+const Button: FC<ButtonProps> = ({
 	repo = 'default',
 	href,
 	children,
@@ -106,9 +107,7 @@ const Button: React.FC<ButtonProps> = ({
 	const pathOnly = (path: string | undefined, externalLink?: boolean) => {
 		if (path) {
 			return (<div className='flex'>
-				<a href={path} rel='noreferrer' target={externalLink ? '_blank' : ''} className={'block pl-5 py-2 pr-12 whitespace-nowrap text-14 text-grayscale-700 any-hover:hover:text-grayscale-900 any-hover:hover:underline cursor-pointer'}>
-					{children}
-				</a>
+				<Link href={path}><a target={externalLink ? '_blank' : ''} rel='noreferrer'className={'block pl-5 py-2 pr-12 whitespace-nowrap text-14 text-grayscale-700 any-hover:hover:text-grayscale-900 any-hover:hover:underline cursor-pointer'}>{children}</a></Link>
 			</div>);
 		}
 
