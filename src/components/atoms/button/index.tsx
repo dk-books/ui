@@ -106,8 +106,8 @@ const Button: FC<ButtonProps> = ({
 
 	const pathOnly = (path: string | undefined, externalLink?: boolean) => {
 		if (path) {
-			return (<div className='flex'>
-				<Link href={path}><a target={externalLink ? '_blank' : ''} rel='noreferrer'className={'block pl-5 py-2 pr-12 whitespace-nowrap text-14 text-grayscale-700 any-hover:hover:text-grayscale-900 any-hover:hover:underline cursor-pointer'}>{children}</a></Link>
+			return (<div className='flex block pl-5 py-2 pr-12 whitespace-nowrap text-14 text-grayscale-700 any-hover:hover:text-grayscale-900 any-hover:hover:underline cursor-pointer'>
+				<Link href={path}>{children}</Link>
 			</div>);
 		}
 
