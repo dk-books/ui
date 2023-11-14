@@ -4,6 +4,7 @@ import {Icons} from '../icons';
 import {dklBtn} from '../../../utility/themes/dkl/theme';
 import {efeBtn, fontColor} from '../../../utility/themes/efe/theme';
 import * as ga from '../../../utility/ga';
+import Link from 'next/link';
 
 type ButtonProps = {
 	repo?: string;
@@ -85,19 +86,19 @@ const Button: React.FC<ButtonProps> = ({
 
 	const ctas: ReactNode[] = [];
 
-	const buttonHref = (href: string | undefined, text?: string, type?: 'button' | 'submit' | 'reset', classnames?: string) => {
+	const buttonHref = (href: string, text?: string, type?: 'button' | 'submit' | 'reset', classnames?: string) => {
 		let buttonType;
 		const classNameList = classnames ? `button button-dark ${classnames}` : 'button button-dark';
 
 		if (type) {
 			buttonType = onClick ? <button className={classNameList} onClick={onClick} type={type}>{children}</button> : <button className={classNameList} type={type}>{children}</button>;
 		} else {
-			buttonType = <a href={href} className={'px-6 py-3'} onClick={() => {
-				googleAnalyticsTracking(text, category);
-			}
-			} aria-controls={ariaControls} target={newTab}>
-				{children}
-			</a>;
+			buttonType = <Link href={href} aria-controls={ariaControls}>
+				<a target={newTab} className={'px-6 py-3'} onClick={() => {
+					googleAnalyticsTracking(text, category);
+				}
+				}>{children}</a>
+			</Link>;
 		}
 
 		return buttonType;
@@ -150,7 +151,7 @@ const Button: React.FC<ButtonProps> = ({
 				<div className={`flex	${wideStyle} ${backButtonStyle} ${classnames!}	${buttonClass!}`}>
 					{icon && dropdown ? (<div className='items-center justify-center pl-5 pr-2'><Icons icon={icon} /></div>) : null}
 					{icon && !dropdown ? (<div className='items-center justify-center pr-2'><Icons icon={icon} /></div>) : null}
-					{((href ?? type) && children) ? <div className='items-center justify-center mx-auto h-full w-full text-ellipsis whitespace-nowrap overflow-hidden flex items-center'>{buttonHref(href, text, type, classnames)}</div> : null}
+					{((href ?? type) && children) ? <div className='items-center justify-center mx-auto h-full w-full text-ellipsis whitespace-nowrap overflow-hidden flex items-center'>{buttonHref(href!, text, type, classnames)}</div> : null}
 					{path ? <>{pathOnly(path, externalLink)}</> : null}
 					{!path && !href && !type ? <>{children}</> : null}
 				</div>
