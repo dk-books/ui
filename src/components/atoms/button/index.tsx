@@ -1,5 +1,5 @@
 import React from 'react';
-import type {FC, ReactNode} from 'react';
+import {useEffect, useState} from 'react';
 import {Icons} from '../icons';
 import {dklBtn} from '../../../utility/themes/dkl/theme';
 import {efeBtn, fontColor} from '../../../utility/themes/efe/theme';
@@ -9,7 +9,7 @@ import Link from 'next/link';
 type ButtonProps = {
 	repo?: string;
 	href?: string;
-	children: ReactNode;
+	children: React.ReactNode;
 	icon?: string;
 	wide?: boolean;
 	externalLink?: boolean;
@@ -84,7 +84,29 @@ const Button: React.FC<ButtonProps> = ({
 		}
 	};
 
-	const ctas: ReactNode[] = [];
+	const ctas = [];
+	const [isMobile, setIsMobile] = useState(
+		typeof window !== 'undefined' && window.innerWidth < 1024,
+	);
+
+	useEffect(() => {
+		function handleResize() {
+			setIsMobile(window.innerWidth < 1024);
+		}
+
+		if (typeof window !== 'undefined') {
+			handleResize();
+		}
+
+		window.addEventListener('resize', handleResize);
+		return () => {
+			// Remove event listener when the component is unmounted to not cause any memory leaks
+			// Otherwise the event listener will continue to be active
+			window.removeEventListener('resize', handleResize);
+		};
+		// Add `isMobile` state variable as a dependency so that
+		// it is called every time the window is resized
+	}, [isMobile]);
 
 	const buttonHref = (href: string, text?: string, type?: 'button' | 'submit' | 'reset', classnames?: string) => {
 		let buttonType;
@@ -92,12 +114,16 @@ const Button: React.FC<ButtonProps> = ({
 
 		if (type) {
 			buttonType = onClick ? <button className={classNameList} onClick={onClick} type={type}>{children}</button> : <button className={classNameList} type={type}>{children}</button>;
-		} else {
+		} else if (isMobile) {
 			buttonType = <Link href={href} aria-controls={ariaControls}>
 				<a target={newTab} className={'px-6 py-3'} onClick={() => {
 					googleAnalyticsTracking(text, category);
 				}
 				}>{children}</a>
+			</Link>;
+		} else {
+			buttonType = <Link href={href} aria-controls={ariaControls}>
+				<div className={'px-6 py-3'}>{children}</div>
 			</Link>;
 		}
 
@@ -161,7 +187,7 @@ const Button: React.FC<ButtonProps> = ({
 
 	return (
 		<>
-			{ctas.map((node: ReactNode, i: number) => (
+			{ctas.map((node, i: number) => (
 				<div key={i} className={divAdd}>{node}</div>
 			))}
 		</>
