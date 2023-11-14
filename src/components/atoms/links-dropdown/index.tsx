@@ -9,6 +9,7 @@ type DropdownLink = {
 	title?: string;
 	path?: string;
 	icon?: {url?: string};
+	fontColorText?: string;
 };
 
 type LinksDropdownProps = {
@@ -58,6 +59,7 @@ const LinksDropdown: FC<LinksDropdownProps> = ({
 										repo={'efe'}
 										externalLink={link.externalLink}
 										path={link.path}
+										fontColorText={link?.fontColorText}
 										icon={link.icon?.url}>
 										{link.title}
 									</Button>
