@@ -1,7 +1,7 @@
 {
   "name": "@dk-books/ui",
   "homepage": "https://dk-books.github.io/ui/",
-  "version": "23.0.1",
+  "version": "24.0.1",
   "main": "build/bundle.js",
   "repository": "dk-books/ui",
   "publishConfig": {
@@ -9,7 +9,7 @@
     "access": "public"
   },
   "peerDependencies": {
-		"next": "^13.5.3",
+    "next": "^13.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
@@ -79,6 +79,7 @@
     "npm-check": "^6.0.1",
     "ra-data-graphql": "^4.12.1",
     "react": "^18.2.0",
+    "react-device-detect": "^2.2.3",
     "react-hook-form": "^7.45.1",
     "storybook-addon-designs": "^6.3.1",
     "use-local-storage": "^3.0.0"

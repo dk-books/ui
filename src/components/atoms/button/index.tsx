@@ -1,5 +1,5 @@
-import React from 'react';
-import {useEffect, useState} from 'react';
+import React, {useState} from 'react';
+import {isMobile} from 'react-device-detect';
 import {Icons} from '../icons';
 import {dklBtn} from '../../../utility/themes/dkl/theme';
 import {efeBtn, fontColor} from '../../../utility/themes/efe/theme';
@@ -85,29 +85,6 @@ const Button: React.FC<ButtonProps> = ({
 	};
 
 	const ctas = [];
-	const [isMobile, setIsMobile] = useState(
-		typeof window !== 'undefined' && window.innerWidth < 1024,
-	);
-
-	useEffect(() => {
-		function handleResize() {
-			setIsMobile(window.innerWidth < 1024);
-		}
-
-		if (typeof window !== 'undefined') {
-			handleResize();
-		}
-
-		window.addEventListener('resize', handleResize);
-		return () => {
-			// Remove event listener when the component is unmounted to not cause any memory leaks
-			// Otherwise the event listener will continue to be active
-			window.removeEventListener('resize', handleResize);
-		};
-		// Add `isMobile` state variable as a dependency so that
-		// it is called every time the window is resized
-	}, [isMobile]);
-
 	const buttonHref = (href: string, text?: string, type?: 'button' | 'submit' | 'reset', classnames?: string) => {
 		let buttonType;
 		const classNameList = classnames ? `button button-dark ${classnames}` : 'button button-dark';
