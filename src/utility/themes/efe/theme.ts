@@ -9,12 +9,13 @@ export const efeBtn: (Record<string, string>) = {
 	navy: 'bg-blue-700 hover:bg-dark-blue-700',
 	teal: 'bg-turquoise-700 hover:bg-turquoise-900',
 	turquoise: 'bg-turquoise-700 hover:bg-turquoise-900',
-	default: 'bg-blue-700 hover:bg-dark-blue-700',
+	default: 'text-grayscale-900 inline-flex items-center',
 };
 
 export const fontColor: (Record<string, string>) = {
 	white: 'text-grayscale-100 inline-flex items-center',
 	gray: 'text-grayscale-400 inline-flex items-center',
+	gray700: 'text-grayscale-700 inline-flex items-center',
 	black: 'text-grayscale-900 inline-flex items-center',
 	default: 'text-grayscale-900 inline-flex items-center',
 };
