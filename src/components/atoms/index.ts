@@ -12,3 +12,4 @@ export * from './links-dropdown';
 export * from './dropdown-template';
 export * from './dropdown';
 export * from './button-and-dropdown';
+export * from './modal';
