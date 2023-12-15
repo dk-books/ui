@@ -15,8 +15,8 @@ displayMessage.args = {
 	displayTitle: 'Everyday English Langauge',
 	displayMessage: 'Please select your language from the list below.',
 	buttons: [
-		{repo: 'efe', href: '/en/audio/every-day-english-uk', label: 'British English', backgroundColor: 'green'},
-		{repo: 'efe', href: '/en/audio/every-day-english-us', label: 'American English', backgroundColor: 'red'},
+		{repo: 'efe', href: '/en/audio/every-day-english-uk', label: 'British English', backgroundColor: 'green', externalLink: true},
+		{repo: 'efe', href: '/en/audio/every-day-english-us', label: 'American English', backgroundColor: 'red', externalLink: true},
 	],
 };
 

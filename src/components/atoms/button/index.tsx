@@ -29,6 +29,7 @@ type ButtonProps = {
 	dropdown?: boolean;
 	type?: 'button' | 'submit' | 'reset';
 	fontColorText?: string;
+	size?: number;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -51,6 +52,7 @@ const Button: React.FC<ButtonProps> = ({
 	onClick,
 	type,
 	fontColorText,
+	size,
 }) => {
 	/** GA tracking */
 	const googleAnalyticsTracking = (item?: string, category?: string | undefined) => {
@@ -109,8 +111,9 @@ const Button: React.FC<ButtonProps> = ({
 
 	const pathOnly = (path: string | undefined, externalLink?: boolean) => {
 		if (path) {
+			const textSize = size ? `text-${size}` : 'text-14';
 			return (<div className='flex'>
-				<a href={path} rel='noreferrer' target={externalLink ? '_blank' : ''} className={'block pl-5 py-2 pr-12 whitespace-nowrap text-14 grayscale-700 any-hover:hover:text-black any-hover:hover:underline cursor-pointer'}>
+				<a href={path} rel='noreferrer' target={externalLink ? '_blank' : ''} className={`block pl-5 py-2 pr-12 whitespace-nowrap ${textSize} grayscale-700 any-hover:hover:text-black any-hover:hover:underline cursor-pointer`}>
 					{children}
 				</a>
 			</div>);

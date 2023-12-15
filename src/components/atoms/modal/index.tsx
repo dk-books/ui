@@ -1,11 +1,12 @@
 import * as React from 'react';
 import type {FC, ReactNode} from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import {dklBtn} from '../../../utility/themes/dkl/theme';
 import {efeBtn, fontColor} from '../../../utility/themes/efe/theme';
+import {Icons} from '../icons';
+import {Button} from '../button';
 
 type ButtonProps = {
 	repo?: string;
@@ -21,6 +22,7 @@ type ButtonProps = {
 	 * Path link
 	 */
 	href: string;
+	externalLink?: boolean;
 };
 
 type BasicModalProps = {
@@ -37,6 +39,7 @@ type BasicModalProps = {
 const BasicModal: FC<BasicModalProps> = ({repo, language, buttonColour, buttonTitle, fontColorText, displayTitle, displayMessage, buttons}) => {
 	const [open, setOpen] = React.useState(false);
 	const handleOpen = () => {
+		console.log('open');
 		setOpen(true);
 	};
 
@@ -67,9 +70,9 @@ const BasicModal: FC<BasicModalProps> = ({repo, language, buttonColour, buttonTi
 	const backButtonStyle = buttonRepo(repo ?? '', type ?? '', buttonColour ?? '');
 
 	return (
-		<div>
-			<Button onClick={handleOpen} className='w-full'>
-				<div className={`${backButtonStyle} w-full uppercase cursor-pointer rounded text-18`}>
+		<div className='w-full'>
+			<Button wide={true}>
+				<div onClick={handleOpen} className={`${backButtonStyle} w-full uppercase cursor-pointer rounded text-18`}>
 					<span className='items-center justify-center w-full block rounded-lg'>
 						<span className='text-white text-18'>{language}</span>
 						<span className=' w-full block leading-7'>
@@ -96,6 +99,9 @@ const BasicModal: FC<BasicModalProps> = ({repo, language, buttonColour, buttonTi
 					width: 400,
 					bgcolor: 'background.paper',
 				}}>
+					<div className='w-full grid absolute justify-items-end pr-12' onClick={handleClose}>
+						<Icons icon='/images/icon-close-grey-small.png' width={10} />
+					</div>
 					<Typography id='modal-modal-title' variant='h6' component='h2'>
 						{displayTitle}
 					</Typography>
@@ -108,7 +114,7 @@ const BasicModal: FC<BasicModalProps> = ({repo, language, buttonColour, buttonTi
 								const background = buttonRepo(repo ?? '', type ?? '', button.backgroundColor ?? 'blue');
 								return (
 									<div key={i} className={`p-5 m-5 ${backButtonStyle} ${background}`}>
-										<Button sx={{color: 'white'}} href={button.href}>{button.label}</Button>
+										<Button externalLink={button.externalLink} path={button.href} size={18}>{button.label}</Button>
 									</div>
 								);
 							},
