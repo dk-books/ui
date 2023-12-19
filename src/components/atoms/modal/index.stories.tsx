@@ -10,6 +10,7 @@ export const displayMessage = Template.bind({});
 displayMessage.args = {
 	repo: 'efe',
 	buttonColour: 'blue',
+	buttonType: 'button1',
 	language: 'English',
 	buttonTitle: 'Everyday English',
 	displayTitle: 'Everyday English Langauge',

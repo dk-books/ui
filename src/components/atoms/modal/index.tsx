@@ -27,6 +27,7 @@ type ButtonProps = {
 
 type BasicModalProps = {
 	repo?: string;
+	buttonType?: string;
 	fontColorText?: string;
 	language?: string;
 	buttonColour?: string;
@@ -36,10 +37,9 @@ type BasicModalProps = {
 	buttons?: ButtonProps[];
 };
 
-const BasicModal: FC<BasicModalProps> = ({repo, language, buttonColour, buttonTitle, fontColorText, displayTitle, displayMessage, buttons}) => {
+const BasicModal: FC<BasicModalProps> = ({repo, buttonType, language, buttonColour, buttonTitle, fontColorText, displayTitle, displayMessage, buttons}) => {
 	const [open, setOpen] = React.useState(false);
 	const handleOpen = () => {
-		console.log('open');
 		setOpen(true);
 	};
 
@@ -67,13 +67,13 @@ const BasicModal: FC<BasicModalProps> = ({repo, language, buttonColour, buttonTi
 		buttonClass = `${fontColor[pickFontColor]}`;
 	}
 
-	const backButtonStyle = buttonRepo(repo ?? '', type ?? '', buttonColour ?? '');
+	const backButtonStyle = buttonRepo(repo ?? '', buttonType ?? '', buttonColour ?? '');
 
 	return (
 		<div className='w-full'>
 			<Button wide={true}>
 				<div onClick={handleOpen} className={`${backButtonStyle} w-full uppercase cursor-pointer rounded text-18`}>
-					<span className='items-center justify-center w-full block rounded-lg'>
+					<span className='items-center justify-center w-full block border-2 rounded-lg'>
 						<span className='text-white text-18'>{language}</span>
 						<span className=' w-full block leading-7'>
 							<span className='text-white inline-block align-top p-0 font-bold tracking-[.6px]'></span>
