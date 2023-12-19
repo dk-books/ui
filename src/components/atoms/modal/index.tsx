@@ -56,7 +56,7 @@ const BasicModal: FC<BasicModalProps> = ({repo, buttonType, language, buttonColo
 			case 'efe':
 				return `${efeBtn[type]} ${efeBtn[buttonColour]}`;
 			default:
-				return 'py-3 px-6 mx-auto text-center';
+				return 'mx-auto text-center';
 		}
 	};
 
