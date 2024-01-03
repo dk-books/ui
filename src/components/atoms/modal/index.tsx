@@ -74,7 +74,7 @@ const BasicModal: FC<BasicModalProps> = ({repo, buttonType, language, buttonColo
 		<div className='w-full'>
 			<Link href='/'>
 				<div onClick={handleOpen} className={`${backButtonStyle} w-full uppercase cursor-pointer rounded text-18`}>
-					<span className='items-center justify-center w-full block rounded-lg'>
+					<span className='items-center justify-center w-full block'>
 						<span className='text-white text-18'>{language}</span>
 						<span className=' w-full block leading-7'>
 							<span className='text-white inline-block align-top p-0 font-bold tracking-[.6px]'></span>
