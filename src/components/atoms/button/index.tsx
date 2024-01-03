@@ -71,7 +71,7 @@ const Button: React.FC<ButtonProps> = ({
 			case 'efe':
 				return `${efeBtn[type]} ${efeBtn[colour]}`;
 			default:
-				return 'py-3 px-6 mx-auto text-center';
+				return 'line-74 py-3 px-6 mx-auto text-center';
 		}
 	};
 
@@ -95,7 +95,7 @@ const Button: React.FC<ButtonProps> = ({
 			buttonType = onClick ? <button className={classNameList} onClick={onClick} type={type}>{children}</button> : <button className={classNameList} type={type}>{children}</button>;
 		} else if (isMobile) {
 			buttonType = <Link href={href} aria-controls={ariaControls}>
-				<a target={newTab} className={'px-6 py-3'} onClick={() => {
+				<a target={newTab} className={'line-98 px-6 py-3'} onClick={() => {
 					googleAnalyticsTracking(text, category);
 				}
 				}>{children}</a>

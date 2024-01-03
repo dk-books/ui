@@ -7,6 +7,7 @@ import {dklBtn} from '../../../utility/themes/dkl/theme';
 import {efeBtn, fontColor} from '../../../utility/themes/efe/theme';
 import {Icons} from '../icons';
 import {Button} from '../button';
+import Link from 'next/link';
 
 type ButtonProps = {
 	repo?: string;
@@ -71,9 +72,9 @@ const BasicModal: FC<BasicModalProps> = ({repo, buttonType, language, buttonColo
 
 	return (
 		<div className='w-full'>
-			<Button wide={true}>
+			<Link href='/'>
 				<div onClick={handleOpen} className={`${backButtonStyle} w-full uppercase cursor-pointer rounded text-18`}>
-					<span className='items-center justify-center w-full block border-2 rounded-lg'>
+					<span className='items-center justify-center w-full block rounded-lg'>
 						<span className='text-white text-18'>{language}</span>
 						<span className=' w-full block leading-7'>
 							<span className='text-white inline-block align-top p-0 font-bold tracking-[.6px]'></span>
@@ -81,7 +82,7 @@ const BasicModal: FC<BasicModalProps> = ({repo, buttonType, language, buttonColo
 						</span>
 					</span>
 				</div>
-			</Button>
+			</Link>
 			<Modal
 				open={open}
 				onClose={handleClose}
