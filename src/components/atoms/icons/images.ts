@@ -5,6 +5,7 @@ const images: Record<string, string> = {
 	mail: '/images/icon-mail.png',
 	computer: '/images/icon-computer.svg',
 	external: '/images/external-white.svg',
+	close: '/images/icon-close-grey-small.png',
 };
 
 export {images};

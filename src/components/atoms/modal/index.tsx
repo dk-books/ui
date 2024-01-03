@@ -72,17 +72,15 @@ const BasicModal: FC<BasicModalProps> = ({repo, buttonType, language, buttonColo
 
 	return (
 		<div className='w-full'>
-			<Link href='/'>
-				<div onClick={handleOpen} className={`${backButtonStyle} w-full uppercase cursor-pointer rounded text-18`}>
-					<span className='items-center justify-center w-full block'>
-						<span className='text-white text-18'>{language}</span>
-						<span className=' w-full block leading-7'>
-							<span className='text-white inline-block align-top p-0 font-bold tracking-[.6px]'></span>
-							<span className='text-white font-bold inline-block align-top p-0 tracking-[.6px] text-18'>{buttonTitle}</span>
-						</span>
+			<div onClick={handleOpen} className={`${backButtonStyle} w-full uppercase cursor-pointer rounded text-18`}>
+				<span className='items-center justify-center w-full block'>
+					<span className='text-white text-18'>{language}</span>
+					<span className=' w-full block leading-7'>
+						<span className='text-white inline-block align-top p-0 font-bold tracking-[.6px]'></span>
+						<span className='text-white font-bold inline-block align-top p-0 tracking-[.6px] text-18'>{buttonTitle}</span>
 					</span>
-				</div>
-			</Link>
+				</span>
+			</div>
 			<Modal
 				open={open}
 				onClose={handleClose}
@@ -101,7 +99,7 @@ const BasicModal: FC<BasicModalProps> = ({repo, buttonType, language, buttonColo
 					bgcolor: 'background.paper',
 				}}>
 					<div className='w-full grid absolute justify-items-end pr-12' onClick={handleClose}>
-						<Icons icon='/images/icon-close-grey-small.png' width={10} />
+						<Icons icon='close' width={10} />
 					</div>
 					<Typography id='modal-modal-title' variant='h6' component='h2'>
 						{displayTitle}
