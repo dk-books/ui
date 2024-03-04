@@ -73,3 +73,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### `Github Deploy Page`
 
 https://dk-books.github.io/ui/
+
+upgraded next 14.1.1
