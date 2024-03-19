@@ -1,7 +1,7 @@
 {
   "name": "@dk-books/ui",
   "homepage": "https://dk-books.github.io/ui/",
-  "version": "42.0.1",
+  "version": "42.0.2",
   "main": "build/bundle.js",
   "repository": "dk-books/ui",
   "publishConfig": {
@@ -81,11 +81,11 @@
     "nock": "^13.3.1",
     "npm-check": "^6.0.1",
     "ra-data-graphql": "^4.12.1",
-    "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
     "react-hook-form": "^7.45.1",
     "storybook-addon-designs": "^6.3.1",
-    "use-local-storage": "^3.0.0"
+    "use-local-storage": "^3.0.0",
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "23.0.4",
@@ -128,7 +128,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1",
+    "react-icons": "^5.0.1",
     "react-scripts": "5.0.1",
     "rollup-plugin-copy": "3.4.0",
     "rollup-plugin-peer-deps-external": "2.2.4",
